@@ -1,0 +1,64 @@
+[2025-11-21T02:30:05.385+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-11-21T02:30:05.390+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: market_data_ingest.load_stage_full scheduled__2025-11-20T02:30:00+00:00 [queued]>
+[2025-11-21T02:30:05.392+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: market_data_ingest.load_stage_full scheduled__2025-11-20T02:30:00+00:00 [queued]>
+[2025-11-21T02:30:05.392+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 2
+[2025-11-21T02:30:05.395+0000] {taskinstance.py:2888} INFO - Executing <Task(PythonOperator): load_stage_full> on 2025-11-20 02:30:00+00:00
+[2025-11-21T02:30:05.399+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=1654) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-11-21T02:30:05.399+0000] {standard_task_runner.py:72} INFO - Started process 1657 to run task
+[2025-11-21T02:30:05.399+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'market_data_ingest', 'load_stage_full', 'scheduled__2025-11-20T02:30:00+00:00', '--job-id', '23', '--raw', '--subdir', 'DAGS_FOLDER/market_data_ingest.py', '--cfg-path', '/tmp/tmpctupsy7l']
+[2025-11-21T02:30:05.400+0000] {standard_task_runner.py:105} INFO - Job 23: Subtask load_stage_full
+[2025-11-21T02:30:05.414+0000] {task_command.py:467} INFO - Running <TaskInstance: market_data_ingest.load_stage_full scheduled__2025-11-20T02:30:00+00:00 [running]> on host 1b75444ae0b9
+[2025-11-21T02:30:05.518+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='data' AIRFLOW_CTX_DAG_ID='market_data_ingest' AIRFLOW_CTX_TASK_ID='load_stage_full' AIRFLOW_CTX_EXECUTION_DATE='2025-11-20T02:30:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-11-20T02:30:00+00:00'
+[2025-11-21T02:30:05.519+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-11-21T02:30:05.523+0000] {market_data_ingest.py:108} INFO - [load_all] symbols=['AAPL', 'NVDA'] train_days=180
+[2025-11-21T02:30:05.961+0000] {market_data_ingest.py:172} INFO - [load_all] AAPL: rows before=180 after=180
+[2025-11-21T02:30:06.221+0000] {market_data_ingest.py:172} INFO - [load_all] NVDA: rows before=180 after=180
+[2025-11-21T02:30:06.232+0000] {base.py:84} INFO - Retrieving connection 'snowflake_conn'
+[2025-11-21T02:30:06.233+0000] {connection.py:413} INFO - Snowflake Connector for Python Version: 3.12.1, Python Version: 3.12.5, Platform: Linux-6.10.14-linuxkit-aarch64-with-glibc2.36
+[2025-11-21T02:30:06.233+0000] {connection.py:1196} INFO - Connecting to GLOBAL Snowflake domain
+[2025-11-21T02:30:06.234+0000] {connection.py:1277} INFO - This connection is in OCSP Fail Open Mode. TLS Certificates would be checked for validity and revocation status. Any other Certificate Revocation related exceptions or OCSP Responder failures would be disregarded in favor of connectivity.
+[2025-11-21T02:30:06.566+0000] {market_data_ingest.py:182} INFO - [load_all] write_pandas -> USER_DB_OSTRICH.RAW.MARKET_DATA_STAGE
+[2025-11-21T02:30:07.005+0000] {cursor.py:1156} INFO - Number of results in first chunk: 1
+[2025-11-21T02:30:09.008+0000] {cursor.py:1156} INFO - Number of results in first chunk: 1
+[2025-11-21T02:30:09.011+0000] {connection.py:788} INFO - closed
+[2025-11-21T02:30:09.064+0000] {connection.py:794} INFO - No async queries seem to be running, deleting session
+[2025-11-21T02:30:09.191+0000] {market_data_ingest.py:194} INFO - [load_all] staged rows=360 chunks=1
+[2025-11-21T02:30:09.193+0000] {python.py:240} INFO - Done. Returned value was: None
+[2025-11-21T02:30:09.210+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-11-21T02:30:09.211+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=market_data_ingest, task_id=load_stage_full, run_id=scheduled__2025-11-20T02:30:00+00:00, execution_date=20251120T023000, start_date=20251121T023005, end_date=20251121T023009
+[2025-11-21T02:30:09.245+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-11-21T02:30:09.253+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/models/baseoperator.py:1378 AirflowProviderDeprecationWarning: Call to deprecated class SnowflakeOperator. (This class is deprecated. Please use `***.providers.common.sql.operators.sql.SQLExecuteQueryOperator`. Also, you can provide `hook_params={'warehouse': <warehouse>, 'database': <database>, 'role': <role>, 'schema': <schema>, 'authenticator': <authenticator>,'session_parameters': <session_parameters>}`.)
+[2025-11-21T02:30:09.262+0000] {taskinstance.py:3900} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-11-21T02:30:09.263+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2025-11-21T23:12:05.060+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-11-21T23:12:05.065+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: market_data_ingest.load_stage_full scheduled__2025-11-20T02:30:00+00:00 [queued]>
+[2025-11-21T23:12:05.067+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: market_data_ingest.load_stage_full scheduled__2025-11-20T02:30:00+00:00 [queued]>
+[2025-11-21T23:12:05.067+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 2
+[2025-11-21T23:12:05.070+0000] {taskinstance.py:2888} INFO - Executing <Task(PythonOperator): load_stage_full> on 2025-11-20 02:30:00+00:00
+[2025-11-21T23:12:05.073+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=516) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-11-21T23:12:05.074+0000] {standard_task_runner.py:72} INFO - Started process 519 to run task
+[2025-11-21T23:12:05.074+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'market_data_ingest', 'load_stage_full', 'scheduled__2025-11-20T02:30:00+00:00', '--job-id', '10', '--raw', '--subdir', 'DAGS_FOLDER/market_data_ingest.py', '--cfg-path', '/tmp/tmpqqa1zu_r']
+[2025-11-21T23:12:05.075+0000] {standard_task_runner.py:105} INFO - Job 10: Subtask load_stage_full
+[2025-11-21T23:12:05.089+0000] {task_command.py:467} INFO - Running <TaskInstance: market_data_ingest.load_stage_full scheduled__2025-11-20T02:30:00+00:00 [running]> on host 082386e15b60
+[2025-11-21T23:12:05.186+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='data' AIRFLOW_CTX_DAG_ID='market_data_ingest' AIRFLOW_CTX_TASK_ID='load_stage_full' AIRFLOW_CTX_EXECUTION_DATE='2025-11-20T02:30:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-11-20T02:30:00+00:00'
+[2025-11-21T23:12:05.186+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-11-21T23:12:05.190+0000] {market_data_ingest.py:108} INFO - [load_all] symbols=['AAPL', 'NVDA'] train_days=180
+[2025-11-21T23:12:05.746+0000] {market_data_ingest.py:172} INFO - [load_all] AAPL: rows before=180 after=180
+[2025-11-21T23:12:06.012+0000] {market_data_ingest.py:172} INFO - [load_all] NVDA: rows before=180 after=180
+[2025-11-21T23:12:06.022+0000] {base.py:84} INFO - Retrieving connection 'snowflake_conn'
+[2025-11-21T23:12:06.023+0000] {connection.py:413} INFO - Snowflake Connector for Python Version: 3.12.1, Python Version: 3.12.5, Platform: Linux-6.10.14-linuxkit-aarch64-with-glibc2.36
+[2025-11-21T23:12:06.023+0000] {connection.py:1196} INFO - Connecting to GLOBAL Snowflake domain
+[2025-11-21T23:12:06.023+0000] {connection.py:1277} INFO - This connection is in OCSP Fail Open Mode. TLS Certificates would be checked for validity and revocation status. Any other Certificate Revocation related exceptions or OCSP Responder failures would be disregarded in favor of connectivity.
+[2025-11-21T23:12:06.350+0000] {market_data_ingest.py:182} INFO - [load_all] write_pandas -> USER_DB_OSTRICH.RAW.MARKET_DATA_STAGE
+[2025-11-21T23:12:06.606+0000] {cursor.py:1156} INFO - Number of results in first chunk: 1
+[2025-11-21T23:12:09.066+0000] {cursor.py:1156} INFO - Number of results in first chunk: 1
+[2025-11-21T23:12:09.067+0000] {connection.py:788} INFO - closed
+[2025-11-21T23:12:09.119+0000] {connection.py:794} INFO - No async queries seem to be running, deleting session
+[2025-11-21T23:12:09.184+0000] {market_data_ingest.py:194} INFO - [load_all] staged rows=360 chunks=1
+[2025-11-21T23:12:09.185+0000] {python.py:240} INFO - Done. Returned value was: None
+[2025-11-21T23:12:09.199+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-11-21T23:12:09.200+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=market_data_ingest, task_id=load_stage_full, run_id=scheduled__2025-11-20T02:30:00+00:00, execution_date=20251120T023000, start_date=20251121T231205, end_date=20251121T231209
+[2025-11-21T23:12:09.228+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-11-21T23:12:09.237+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/models/baseoperator.py:1378 AirflowProviderDeprecationWarning: Call to deprecated class SnowflakeOperator. (This class is deprecated. Please use `***.providers.common.sql.operators.sql.SQLExecuteQueryOperator`. Also, you can provide `hook_params={'warehouse': <warehouse>, 'database': <database>, 'role': <role>, 'schema': <schema>, 'authenticator': <authenticator>,'session_parameters': <session_parameters>}`.)
+[2025-11-21T23:12:09.245+0000] {taskinstance.py:3900} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-11-21T23:12:09.245+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

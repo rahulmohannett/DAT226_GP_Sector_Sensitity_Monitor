@@ -1,0 +1,20 @@
+[2025-11-22T02:46:53.661+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-11-22T02:46:53.669+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: TrainPredict.predict scheduled__2025-11-21T02:45:00+00:00 [queued]>
+[2025-11-22T02:46:53.675+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: TrainPredict.predict scheduled__2025-11-21T02:45:00+00:00 [queued]>
+[2025-11-22T02:46:53.675+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2025-11-22T02:46:53.680+0000] {taskinstance.py:2888} INFO - Executing <Task(_PythonDecoratedOperator): predict> on 2025-11-21 02:45:00+00:00
+[2025-11-22T02:46:53.687+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=3749) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-11-22T02:46:53.686+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'TrainPredict', 'predict', 'scheduled__2025-11-21T02:45:00+00:00', '--job-id', '51', '--raw', '--subdir', 'DAGS_FOLDER/train_predict.py', '--cfg-path', '/tmp/tmp0qsh3ve1']
+[2025-11-22T02:46:53.687+0000] {standard_task_runner.py:105} INFO - Job 51: Subtask predict
+[2025-11-22T02:46:53.687+0000] {standard_task_runner.py:72} INFO - Started process 3752 to run task
+[2025-11-22T02:46:53.720+0000] {task_command.py:467} INFO - Running <TaskInstance: TrainPredict.predict scheduled__2025-11-21T02:45:00+00:00 [running]> on host 663ef6e4cd5f
+[2025-11-22T02:46:53.765+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='TrainPredict' AIRFLOW_CTX_TASK_ID='predict' AIRFLOW_CTX_EXECUTION_DATE='2025-11-21T02:45:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-11-21T02:45:00+00:00'
+[2025-11-22T02:46:53.766+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-11-22T02:47:19.290+0000] {cursor.py:1156} INFO - Number of results in first chunk: 1
+[2025-11-22T02:47:20.313+0000] {cursor.py:1156} INFO - Number of results in first chunk: 1
+[2025-11-22T02:47:20.315+0000] {python.py:240} INFO - Done. Returned value was: None
+[2025-11-22T02:47:20.325+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-11-22T02:47:20.326+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=TrainPredict, task_id=predict, run_id=scheduled__2025-11-21T02:45:00+00:00, execution_date=20251121T024500, start_date=20251122T024653, end_date=20251122T024720
+[2025-11-22T02:47:20.375+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-11-22T02:47:20.385+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-11-22T02:47:20.386+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

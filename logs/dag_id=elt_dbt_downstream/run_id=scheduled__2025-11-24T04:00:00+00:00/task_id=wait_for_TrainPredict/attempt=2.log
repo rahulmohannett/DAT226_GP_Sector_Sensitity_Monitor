@@ -1,0 +1,21 @@
+[2025-12-02T20:58:51.817+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-12-02T20:58:51.824+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: elt_dbt_downstream.wait_for_TrainPredict scheduled__2025-11-24T04:00:00+00:00 [queued]>
+[2025-12-02T20:58:51.826+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: elt_dbt_downstream.wait_for_TrainPredict scheduled__2025-11-24T04:00:00+00:00 [queued]>
+[2025-12-02T20:58:51.826+0000] {taskinstance.py:2865} INFO - Starting attempt 2 of 3
+[2025-12-02T20:58:51.830+0000] {taskinstance.py:2888} INFO - Executing <Task(ExternalTaskSensor): wait_for_TrainPredict> on 2025-11-24 04:00:00+00:00
+[2025-12-02T20:58:51.834+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=1233) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-12-02T20:58:51.834+0000] {standard_task_runner.py:72} INFO - Started process 1234 to run task
+[2025-12-02T20:58:51.834+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'elt_dbt_downstream', 'wait_for_TrainPredict', 'scheduled__2025-11-24T04:00:00+00:00', '--job-id', '90', '--raw', '--subdir', 'DAGS_FOLDER/elt_dbt_downstream.py', '--cfg-path', '/tmp/tmpy7ck6tl8']
+[2025-12-02T20:58:51.835+0000] {standard_task_runner.py:105} INFO - Job 90: Subtask wait_for_TrainPredict
+[2025-12-02T20:58:51.853+0000] {task_command.py:467} INFO - Running <TaskInstance: elt_dbt_downstream.wait_for_TrainPredict scheduled__2025-11-24T04:00:00+00:00 [running]> on host 2e122a66e6c3
+[2025-12-02T20:58:51.880+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='elt_dbt_downstream' AIRFLOW_CTX_TASK_ID='wait_for_TrainPredict' AIRFLOW_CTX_EXECUTION_DATE='2025-11-24T04:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-11-24T04:00:00+00:00'
+[2025-12-02T20:58:51.881+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-12-02T20:58:51.886+0000] {baseoperator.py:405} WARNING - ExternalTaskSensor.execute cannot be called outside TaskInstance!
+[2025-12-02T20:58:51.887+0000] {external_task.py:274} INFO - Poking for DAG 'TrainPredict' on 2025-11-24T03:30:00+00:00 ... 
+[2025-12-02T20:58:51.887+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/utils/session.py:97 DeprecationWarning: This method is deprecated and will be removed in future.
+[2025-12-02T20:58:51.890+0000] {base.py:336} INFO - Success criteria met. Exiting.
+[2025-12-02T20:58:51.893+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-12-02T20:58:51.893+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=elt_dbt_downstream, task_id=wait_for_TrainPredict, run_id=scheduled__2025-11-24T04:00:00+00:00, execution_date=20251124T040000, start_date=20251202T205851, end_date=20251202T205851
+[2025-12-02T20:58:51.937+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-12-02T20:58:51.952+0000] {taskinstance.py:3900} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-12-02T20:58:51.953+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

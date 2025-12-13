@@ -1,0 +1,33 @@
+[2025-12-02T20:47:02.045+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-12-02T20:47:02.053+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: market_data_ingest.truncate_stage scheduled__2025-11-24T02:30:00+00:00 [queued]>
+[2025-12-02T20:47:02.059+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: market_data_ingest.truncate_stage scheduled__2025-11-24T02:30:00+00:00 [queued]>
+[2025-12-02T20:47:02.060+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 2
+[2025-12-02T20:47:02.071+0000] {taskinstance.py:2888} INFO - Executing <Task(SnowflakeOperator): truncate_stage> on 2025-11-24 02:30:00+00:00
+[2025-12-02T20:47:02.078+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=249) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-12-02T20:47:02.079+0000] {standard_task_runner.py:72} INFO - Started process 255 to run task
+[2025-12-02T20:47:02.078+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'market_data_ingest', 'truncate_stage', 'scheduled__2025-11-24T02:30:00+00:00', '--job-id', '61', '--raw', '--subdir', 'DAGS_FOLDER/market_data_ingest.py', '--cfg-path', '/tmp/tmpvn1r44n5']
+[2025-12-02T20:47:02.080+0000] {standard_task_runner.py:105} INFO - Job 61: Subtask truncate_stage
+[2025-12-02T20:47:02.109+0000] {task_command.py:467} INFO - Running <TaskInstance: market_data_ingest.truncate_stage scheduled__2025-11-24T02:30:00+00:00 [running]> on host 2e122a66e6c3
+[2025-12-02T20:47:02.299+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='data' AIRFLOW_CTX_DAG_ID='market_data_ingest' AIRFLOW_CTX_TASK_ID='truncate_stage' AIRFLOW_CTX_EXECUTION_DATE='2025-11-24T02:30:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-11-24T02:30:00+00:00'
+[2025-12-02T20:47:02.299+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-12-02T20:47:02.305+0000] {sql.py:266} INFO - Executing: truncate table if exists "USER_DB_OSTRICH"."RAW"."MARKET_DATA_STAGE"
+[2025-12-02T20:47:02.309+0000] {base.py:84} INFO - Retrieving connection 'snowflake_conn'
+[2025-12-02T20:47:02.312+0000] {base.py:84} INFO - Retrieving connection 'snowflake_conn'
+[2025-12-02T20:47:02.313+0000] {connection.py:413} INFO - Snowflake Connector for Python Version: 3.12.1, Python Version: 3.12.5, Platform: Linux-6.10.14-linuxkit-aarch64-with-glibc2.36
+[2025-12-02T20:47:02.313+0000] {connection.py:1196} INFO - Connecting to GLOBAL Snowflake domain
+[2025-12-02T20:47:02.313+0000] {connection.py:1277} INFO - This connection is in OCSP Fail Open Mode. TLS Certificates would be checked for validity and revocation status. Any other Certificate Revocation related exceptions or OCSP Responder failures would be disregarded in favor of connectivity.
+[2025-12-02T20:47:02.835+0000] {cursor.py:1156} INFO - Number of results in first chunk: 1
+[2025-12-02T20:47:02.835+0000] {sql.py:509} INFO - Running statement: truncate table if exists "USER_DB_OSTRICH"."RAW"."MARKET_DATA_STAGE", parameters: None
+[2025-12-02T20:47:03.823+0000] {cursor.py:1156} INFO - Number of results in first chunk: 1
+[2025-12-02T20:47:03.823+0000] {sql.py:518} INFO - Rows affected: 1
+[2025-12-02T20:47:03.824+0000] {snowflake.py:422} INFO - Rows affected: 1
+[2025-12-02T20:47:03.824+0000] {snowflake.py:423} INFO - Snowflake query id: 01c0c9df-0307-2bb8-000f-c0df00a8f0ca
+[2025-12-02T20:47:04.076+0000] {cursor.py:1156} INFO - Number of results in first chunk: 1
+[2025-12-02T20:47:04.077+0000] {connection.py:788} INFO - closed
+[2025-12-02T20:47:04.131+0000] {connection.py:794} INFO - No async queries seem to be running, deleting session
+[2025-12-02T20:47:04.201+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-12-02T20:47:04.201+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=market_data_ingest, task_id=truncate_stage, run_id=scheduled__2025-11-24T02:30:00+00:00, execution_date=20251124T023000, start_date=20251202T204702, end_date=20251202T204704
+[2025-12-02T20:47:04.234+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-12-02T20:47:04.241+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/models/baseoperator.py:1378 AirflowProviderDeprecationWarning: Call to deprecated class SnowflakeOperator. (This class is deprecated. Please use `***.providers.common.sql.operators.sql.SQLExecuteQueryOperator`. Also, you can provide `hook_params={'warehouse': <warehouse>, 'database': <database>, 'role': <role>, 'schema': <schema>, 'authenticator': <authenticator>,'session_parameters': <session_parameters>}`.)
+[2025-12-02T20:47:04.251+0000] {taskinstance.py:3900} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-12-02T20:47:04.251+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

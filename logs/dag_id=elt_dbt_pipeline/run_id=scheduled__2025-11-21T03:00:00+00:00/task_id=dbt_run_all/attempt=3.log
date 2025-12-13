@@ -1,0 +1,83 @@
+[2025-11-22T18:40:23.384+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-11-22T18:40:23.391+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: elt_dbt_pipeline.dbt_run_all scheduled__2025-11-21T03:00:00+00:00 [queued]>
+[2025-11-22T18:40:23.394+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: elt_dbt_pipeline.dbt_run_all scheduled__2025-11-21T03:00:00+00:00 [queued]>
+[2025-11-22T18:40:23.395+0000] {taskinstance.py:2865} INFO - Starting attempt 3 of 4
+[2025-11-22T18:40:23.399+0000] {taskinstance.py:2888} INFO - Executing <Task(BashOperator): dbt_run_all> on 2025-11-21 03:00:00+00:00
+[2025-11-22T18:40:23.402+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'elt_dbt_pipeline', 'dbt_run_all', 'scheduled__2025-11-21T03:00:00+00:00', '--job-id', '12', '--raw', '--subdir', 'DAGS_FOLDER/elt_dbt_pipeline.py', '--cfg-path', '/tmp/tmpfbunlaq6']
+[2025-11-22T18:40:23.404+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=763) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-11-22T18:40:23.404+0000] {standard_task_runner.py:105} INFO - Job 12: Subtask dbt_run_all
+[2025-11-22T18:40:23.404+0000] {standard_task_runner.py:72} INFO - Started process 764 to run task
+[2025-11-22T18:40:23.422+0000] {task_command.py:467} INFO - Running <TaskInstance: elt_dbt_pipeline.dbt_run_all scheduled__2025-11-21T03:00:00+00:00 [running]> on host 599ab64e91dc
+[2025-11-22T18:40:23.448+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='elt_dbt_pipeline' AIRFLOW_CTX_TASK_ID='dbt_run_all' AIRFLOW_CTX_EXECUTION_DATE='2025-11-21T03:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='3' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-11-21T03:00:00+00:00'
+[2025-11-22T18:40:23.448+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-11-22T18:40:23.455+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-11-22T18:40:23.455+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'set -euo pipefail;cd /opt/***/dbt/stock_analytics && dbt debug --profiles-dir /opt/***/dbt && dbt run --profiles-dir /opt/***/dbt']
+[2025-11-22T18:40:23.459+0000] {subprocess.py:86} INFO - Output:
+[2025-11-22T18:40:24.380+0000] {subprocess.py:93} INFO - [0m18:40:24  Running with dbt=1.11.0-rc1
+[2025-11-22T18:40:24.384+0000] {subprocess.py:93} INFO - [0m18:40:24  dbt version: 1.11.0-rc1
+[2025-11-22T18:40:24.384+0000] {subprocess.py:93} INFO - [0m18:40:24  python version: 3.12.5
+[2025-11-22T18:40:24.385+0000] {subprocess.py:93} INFO - [0m18:40:24  python path: /opt/***/dbt_venv/bin/python3.12
+[2025-11-22T18:40:24.385+0000] {subprocess.py:93} INFO - [0m18:40:24  os info: Linux-6.10.14-linuxkit-aarch64-with-glibc2.36
+[2025-11-22T18:40:24.498+0000] {subprocess.py:93} INFO - [0m18:40:24  Using profiles dir at /opt/***/dbt
+[2025-11-22T18:40:24.499+0000] {subprocess.py:93} INFO - [0m18:40:24  Using profiles.yml file at /opt/***/dbt/profiles.yml
+[2025-11-22T18:40:24.499+0000] {subprocess.py:93} INFO - [0m18:40:24  Using dbt_project.yml file at /opt/***/dbt/stock_analytics/dbt_project.yml
+[2025-11-22T18:40:24.499+0000] {subprocess.py:93} INFO - [0m18:40:24  adapter type: snowflake
+[2025-11-22T18:40:24.499+0000] {subprocess.py:93} INFO - [0m18:40:24  adapter version: 1.10.3
+[2025-11-22T18:40:24.538+0000] {subprocess.py:93} INFO - [0m18:40:24  Configuration:
+[2025-11-22T18:40:24.538+0000] {subprocess.py:93} INFO - [0m18:40:24    profiles.yml file [[32mOK found and valid[0m]
+[2025-11-22T18:40:24.538+0000] {subprocess.py:93} INFO - [0m18:40:24    dbt_project.yml file [[32mOK found and valid[0m]
+[2025-11-22T18:40:24.538+0000] {subprocess.py:93} INFO - [0m18:40:24  Required dependencies:
+[2025-11-22T18:40:24.541+0000] {subprocess.py:93} INFO - [0m18:40:24   - git [[32mOK found[0m]
+[2025-11-22T18:40:24.541+0000] {subprocess.py:93} INFO - 
+[2025-11-22T18:40:24.541+0000] {subprocess.py:93} INFO - [0m18:40:24  Connection:
+[2025-11-22T18:40:24.541+0000] {subprocess.py:93} INFO - [0m18:40:24    account: sfedu02-lvb17920
+[2025-11-22T18:40:24.541+0000] {subprocess.py:93} INFO - [0m18:40:24    user: OSTRICH
+[2025-11-22T18:40:24.541+0000] {subprocess.py:93} INFO - [0m18:40:24    database: USER_DB_OSTRICH
+[2025-11-22T18:40:24.541+0000] {subprocess.py:93} INFO - [0m18:40:24    warehouse: OSTRICH_QUERY_WH
+[2025-11-22T18:40:24.542+0000] {subprocess.py:93} INFO - [0m18:40:24    role: TRAINING_ROLE
+[2025-11-22T18:40:24.542+0000] {subprocess.py:93} INFO - [0m18:40:24    schema: PUBLIC
+[2025-11-22T18:40:24.542+0000] {subprocess.py:93} INFO - [0m18:40:24    authenticator: None
+[2025-11-22T18:40:24.542+0000] {subprocess.py:93} INFO - [0m18:40:24    oauth_client_id: None
+[2025-11-22T18:40:24.542+0000] {subprocess.py:93} INFO - [0m18:40:24    query_tag: None
+[2025-11-22T18:40:24.543+0000] {subprocess.py:93} INFO - [0m18:40:24    client_session_keep_alive: False
+[2025-11-22T18:40:24.543+0000] {subprocess.py:93} INFO - [0m18:40:24    host: None
+[2025-11-22T18:40:24.543+0000] {subprocess.py:93} INFO - [0m18:40:24    port: None
+[2025-11-22T18:40:24.543+0000] {subprocess.py:93} INFO - [0m18:40:24    proxy_host: None
+[2025-11-22T18:40:24.543+0000] {subprocess.py:93} INFO - [0m18:40:24    proxy_port: None
+[2025-11-22T18:40:24.543+0000] {subprocess.py:93} INFO - [0m18:40:24    protocol: None
+[2025-11-22T18:40:24.543+0000] {subprocess.py:93} INFO - [0m18:40:24    connect_retries: 1
+[2025-11-22T18:40:24.544+0000] {subprocess.py:93} INFO - [0m18:40:24    connect_timeout: None
+[2025-11-22T18:40:24.544+0000] {subprocess.py:93} INFO - [0m18:40:24    retry_on_database_errors: False
+[2025-11-22T18:40:24.544+0000] {subprocess.py:93} INFO - [0m18:40:24    retry_all: False
+[2025-11-22T18:40:24.544+0000] {subprocess.py:93} INFO - [0m18:40:24    insecure_mode: False
+[2025-11-22T18:40:24.544+0000] {subprocess.py:93} INFO - [0m18:40:24    reuse_connections: True
+[2025-11-22T18:40:24.544+0000] {subprocess.py:93} INFO - [0m18:40:24    s3_stage_vpce_dns_name: None
+[2025-11-22T18:40:24.545+0000] {subprocess.py:93} INFO - [0m18:40:24    platform_detection_timeout_seconds: 0.0
+[2025-11-22T18:40:24.545+0000] {subprocess.py:93} INFO - [0m18:40:24  Registered adapter: snowflake=1.10.3
+[2025-11-22T18:40:25.070+0000] {subprocess.py:93} INFO - [0m18:40:25    Connection test: [[32mOK connection ok[0m]
+[2025-11-22T18:40:25.071+0000] {subprocess.py:93} INFO - 
+[2025-11-22T18:40:25.071+0000] {subprocess.py:93} INFO - [0m18:40:25  [32mAll checks passed![0m
+[2025-11-22T18:40:26.638+0000] {subprocess.py:93} INFO - [0m18:40:26  Running with dbt=1.11.0-rc1
+[2025-11-22T18:40:26.809+0000] {subprocess.py:93} INFO - [0m18:40:26  Registered adapter: snowflake=1.10.3
+[2025-11-22T18:40:27.149+0000] {subprocess.py:93} INFO - [0m18:40:27  Found 3 models, 8 data tests, 1 source, 504 macros
+[2025-11-22T18:40:27.150+0000] {subprocess.py:93} INFO - [0m18:40:27
+[2025-11-22T18:40:27.150+0000] {subprocess.py:93} INFO - [0m18:40:27  Concurrency: 4 threads (target='dev')
+[2025-11-22T18:40:27.150+0000] {subprocess.py:93} INFO - [0m18:40:27
+[2025-11-22T18:40:27.794+0000] {subprocess.py:93} INFO - [0m18:40:27  1 of 3 START sql view model PUBLIC_STAGING.stg_market_data ..................... [RUN]
+[2025-11-22T18:40:28.052+0000] {subprocess.py:93} INFO - [0m18:40:28  1 of 3 OK created sql view model PUBLIC_STAGING.stg_market_data ................ [[32mSUCCESS 1[0m in 0.26s]
+[2025-11-22T18:40:28.054+0000] {subprocess.py:93} INFO - [0m18:40:28  2 of 3 START sql view model PUBLIC_INTERMEDIATE.int_daily_returns .............. [RUN]
+[2025-11-22T18:40:28.443+0000] {subprocess.py:93} INFO - [0m18:40:28  2 of 3 OK created sql view model PUBLIC_INTERMEDIATE.int_daily_returns ......... [[32mSUCCESS 1[0m in 0.39s]
+[2025-11-22T18:40:28.445+0000] {subprocess.py:93} INFO - [0m18:40:28  3 of 3 START sql table model PUBLIC_ANALYTICS.mart_sector_volatility ........... [RUN]
+[2025-11-22T18:40:30.090+0000] {subprocess.py:93} INFO - [0m18:40:30  3 of 3 OK created sql table model PUBLIC_ANALYTICS.mart_sector_volatility ...... [[32mSUCCESS 1[0m in 1.64s]
+[2025-11-22T18:40:30.594+0000] {subprocess.py:93} INFO - [0m18:40:30
+[2025-11-22T18:40:30.595+0000] {subprocess.py:93} INFO - [0m18:40:30  Finished running 1 table model, 2 view models in 0 hours 0 minutes and 3.44 seconds (3.44s).
+[2025-11-22T18:40:30.636+0000] {subprocess.py:93} INFO - [0m18:40:30
+[2025-11-22T18:40:30.637+0000] {subprocess.py:93} INFO - [0m18:40:30  [32mCompleted successfully[0m
+[2025-11-22T18:40:30.637+0000] {subprocess.py:93} INFO - [0m18:40:30
+[2025-11-22T18:40:30.637+0000] {subprocess.py:93} INFO - [0m18:40:30  Done. PASS=3 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=3
+[2025-11-22T18:40:31.175+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-11-22T18:40:31.188+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-11-22T18:40:31.188+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=elt_dbt_pipeline, task_id=dbt_run_all, run_id=scheduled__2025-11-21T03:00:00+00:00, execution_date=20251121T030000, start_date=20251122T184023, end_date=20251122T184031
+[2025-11-22T18:40:31.235+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-11-22T18:40:31.243+0000] {taskinstance.py:3900} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-11-22T18:40:31.245+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

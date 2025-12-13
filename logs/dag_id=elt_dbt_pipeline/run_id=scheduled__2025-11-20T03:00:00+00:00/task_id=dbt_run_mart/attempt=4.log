@@ -1,0 +1,93 @@
+[2025-11-21T23:54:15.689+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-11-21T23:54:15.697+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: elt_dbt_pipeline.dbt_run_mart scheduled__2025-11-20T03:00:00+00:00 [queued]>
+[2025-11-21T23:54:15.700+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: elt_dbt_pipeline.dbt_run_mart scheduled__2025-11-20T03:00:00+00:00 [queued]>
+[2025-11-21T23:54:15.700+0000] {taskinstance.py:2865} INFO - Starting attempt 4 of 5
+[2025-11-21T23:54:15.704+0000] {taskinstance.py:2888} INFO - Executing <Task(BashOperator): dbt_run_mart> on 2025-11-20 03:00:00+00:00
+[2025-11-21T23:54:15.708+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'elt_dbt_pipeline', 'dbt_run_mart', 'scheduled__2025-11-20T03:00:00+00:00', '--job-id', '40', '--raw', '--subdir', 'DAGS_FOLDER/elt_dbt_pipeline.py', '--cfg-path', '/tmp/tmp8qn72sv5']
+[2025-11-21T23:54:15.708+0000] {standard_task_runner.py:105} INFO - Job 40: Subtask dbt_run_mart
+[2025-11-21T23:54:15.708+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=1403) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-11-21T23:54:15.709+0000] {standard_task_runner.py:72} INFO - Started process 1404 to run task
+[2025-11-21T23:54:15.723+0000] {task_command.py:467} INFO - Running <TaskInstance: elt_dbt_pipeline.dbt_run_mart scheduled__2025-11-20T03:00:00+00:00 [running]> on host 663ef6e4cd5f
+[2025-11-21T23:54:15.748+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='elt_dbt_pipeline' AIRFLOW_CTX_TASK_ID='dbt_run_mart' AIRFLOW_CTX_EXECUTION_DATE='2025-11-20T03:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='4' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-11-20T03:00:00+00:00'
+[2025-11-21T23:54:15.748+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-11-21T23:54:15.755+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-11-21T23:54:15.756+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'set -euo pipefail;cd /opt/***/dbt/stock_analytics && dbt debug --profiles-dir /opt/***/dbt && dbt run -s mart_stock_analysis --profiles-dir /opt/***/dbt']
+[2025-11-21T23:54:15.759+0000] {subprocess.py:86} INFO - Output:
+[2025-11-21T23:54:16.726+0000] {subprocess.py:93} INFO - [0m23:54:16  Running with dbt=1.11.0-rc1
+[2025-11-21T23:54:16.731+0000] {subprocess.py:93} INFO - [0m23:54:16  dbt version: 1.11.0-rc1
+[2025-11-21T23:54:16.731+0000] {subprocess.py:93} INFO - [0m23:54:16  python version: 3.12.5
+[2025-11-21T23:54:16.731+0000] {subprocess.py:93} INFO - [0m23:54:16  python path: /opt/***/dbt_venv/bin/python3.12
+[2025-11-21T23:54:16.731+0000] {subprocess.py:93} INFO - [0m23:54:16  os info: Linux-6.10.14-linuxkit-aarch64-with-glibc2.36
+[2025-11-21T23:54:16.844+0000] {subprocess.py:93} INFO - [0m23:54:16  Using profiles dir at /opt/***/dbt
+[2025-11-21T23:54:16.845+0000] {subprocess.py:93} INFO - [0m23:54:16  Using profiles.yml file at /opt/***/dbt/profiles.yml
+[2025-11-21T23:54:16.845+0000] {subprocess.py:93} INFO - [0m23:54:16  Using dbt_project.yml file at /opt/***/dbt/stock_analytics/dbt_project.yml
+[2025-11-21T23:54:16.845+0000] {subprocess.py:93} INFO - [0m23:54:16  adapter type: snowflake
+[2025-11-21T23:54:16.845+0000] {subprocess.py:93} INFO - [0m23:54:16  adapter version: 1.10.3
+[2025-11-21T23:54:16.886+0000] {subprocess.py:93} INFO - [0m23:54:16  Configuration:
+[2025-11-21T23:54:16.886+0000] {subprocess.py:93} INFO - [0m23:54:16    profiles.yml file [[32mOK found and valid[0m]
+[2025-11-21T23:54:16.887+0000] {subprocess.py:93} INFO - [0m23:54:16    dbt_project.yml file [[32mOK found and valid[0m]
+[2025-11-21T23:54:16.887+0000] {subprocess.py:93} INFO - [0m23:54:16  Required dependencies:
+[2025-11-21T23:54:16.890+0000] {subprocess.py:93} INFO - [0m23:54:16   - git [[32mOK found[0m]
+[2025-11-21T23:54:16.890+0000] {subprocess.py:93} INFO - 
+[2025-11-21T23:54:16.890+0000] {subprocess.py:93} INFO - [0m23:54:16  Connection:
+[2025-11-21T23:54:16.890+0000] {subprocess.py:93} INFO - [0m23:54:16    account: sfedu02-lvb17920
+[2025-11-21T23:54:16.890+0000] {subprocess.py:93} INFO - [0m23:54:16    user: OSTRICH
+[2025-11-21T23:54:16.890+0000] {subprocess.py:93} INFO - [0m23:54:16    database: USER_DB_OSTRICH
+[2025-11-21T23:54:16.890+0000] {subprocess.py:93} INFO - [0m23:54:16    warehouse: OSTRICH_QUERY_WH
+[2025-11-21T23:54:16.891+0000] {subprocess.py:93} INFO - [0m23:54:16    role: TRAINING_ROLE
+[2025-11-21T23:54:16.891+0000] {subprocess.py:93} INFO - [0m23:54:16    schema: PUBLIC
+[2025-11-21T23:54:16.891+0000] {subprocess.py:93} INFO - [0m23:54:16    authenticator: None
+[2025-11-21T23:54:16.891+0000] {subprocess.py:93} INFO - [0m23:54:16    oauth_client_id: None
+[2025-11-21T23:54:16.891+0000] {subprocess.py:93} INFO - [0m23:54:16    query_tag: None
+[2025-11-21T23:54:16.891+0000] {subprocess.py:93} INFO - [0m23:54:16    client_session_keep_alive: False
+[2025-11-21T23:54:16.892+0000] {subprocess.py:93} INFO - [0m23:54:16    host: None
+[2025-11-21T23:54:16.892+0000] {subprocess.py:93} INFO - [0m23:54:16    port: None
+[2025-11-21T23:54:16.892+0000] {subprocess.py:93} INFO - [0m23:54:16    proxy_host: None
+[2025-11-21T23:54:16.892+0000] {subprocess.py:93} INFO - [0m23:54:16    proxy_port: None
+[2025-11-21T23:54:16.892+0000] {subprocess.py:93} INFO - [0m23:54:16    protocol: None
+[2025-11-21T23:54:16.892+0000] {subprocess.py:93} INFO - [0m23:54:16    connect_retries: 1
+[2025-11-21T23:54:16.893+0000] {subprocess.py:93} INFO - [0m23:54:16    connect_timeout: None
+[2025-11-21T23:54:16.893+0000] {subprocess.py:93} INFO - [0m23:54:16    retry_on_database_errors: False
+[2025-11-21T23:54:16.893+0000] {subprocess.py:93} INFO - [0m23:54:16    retry_all: False
+[2025-11-21T23:54:16.893+0000] {subprocess.py:93} INFO - [0m23:54:16    insecure_mode: False
+[2025-11-21T23:54:16.893+0000] {subprocess.py:93} INFO - [0m23:54:16    reuse_connections: True
+[2025-11-21T23:54:16.893+0000] {subprocess.py:93} INFO - [0m23:54:16    s3_stage_vpce_dns_name: None
+[2025-11-21T23:54:16.893+0000] {subprocess.py:93} INFO - [0m23:54:16    platform_detection_timeout_seconds: 0.0
+[2025-11-21T23:54:16.894+0000] {subprocess.py:93} INFO - [0m23:54:16  Registered adapter: snowflake=1.10.3
+[2025-11-21T23:54:17.446+0000] {subprocess.py:93} INFO - [0m23:54:17    Connection test: [[32mOK connection ok[0m]
+[2025-11-21T23:54:17.446+0000] {subprocess.py:93} INFO - 
+[2025-11-21T23:54:17.447+0000] {subprocess.py:93} INFO - [0m23:54:17  [32mAll checks passed![0m
+[2025-11-21T23:54:19.017+0000] {subprocess.py:93} INFO - [0m23:54:19  Running with dbt=1.11.0-rc1
+[2025-11-21T23:54:19.181+0000] {subprocess.py:93} INFO - [0m23:54:19  Registered adapter: snowflake=1.10.3
+[2025-11-21T23:54:19.271+0000] {subprocess.py:93} INFO - [0m23:54:19  Unable to do partial parsing because an error occurred. Switching to full reparse.
+[2025-11-21T23:54:19.746+0000] {subprocess.py:93} INFO - [0m23:54:19  [[33mWARNING[0m][MissingArgumentsPropertyInGenericTestDeprecation]: Deprecated
+[2025-11-21T23:54:19.746+0000] {subprocess.py:93} INFO - functionality
+[2025-11-21T23:54:19.746+0000] {subprocess.py:93} INFO - Found top-level arguments to test `accepted_values` defined on
+[2025-11-21T23:54:19.746+0000] {subprocess.py:93} INFO - 'mart_stock_analysis' in package 'stock_analytics'
+[2025-11-21T23:54:19.746+0000] {subprocess.py:93} INFO - (models/marts/mart_stock_analysis.yml). Arguments to generic tests should be
+[2025-11-21T23:54:19.747+0000] {subprocess.py:93} INFO - nested under the `arguments` property.
+[2025-11-21T23:54:19.881+0000] {subprocess.py:93} INFO - [0m23:54:19  Found 3 models, 11 data tests, 2 sources, 504 macros
+[2025-11-21T23:54:19.881+0000] {subprocess.py:93} INFO - [0m23:54:19
+[2025-11-21T23:54:19.882+0000] {subprocess.py:93} INFO - [0m23:54:19  Concurrency: 1 threads (target='dev')
+[2025-11-21T23:54:19.882+0000] {subprocess.py:93} INFO - [0m23:54:19
+[2025-11-21T23:54:20.716+0000] {subprocess.py:93} INFO - [0m23:54:20  1 of 1 START sql table model PUBLIC_ANALYTICS.mart_stock_analysis .............. [RUN]
+[2025-11-21T23:54:22.180+0000] {subprocess.py:93} INFO - [0m23:54:22  1 of 1 OK created sql table model PUBLIC_ANALYTICS.mart_stock_analysis ......... [[32mSUCCESS 1[0m in 1.46s]
+[2025-11-21T23:54:22.288+0000] {subprocess.py:93} INFO - [0m23:54:22
+[2025-11-21T23:54:22.289+0000] {subprocess.py:93} INFO - [0m23:54:22  Finished running 1 table model in 0 hours 0 minutes and 2.41 seconds (2.41s).
+[2025-11-21T23:54:22.325+0000] {subprocess.py:93} INFO - [0m23:54:22
+[2025-11-21T23:54:22.325+0000] {subprocess.py:93} INFO - [0m23:54:22  [32mCompleted successfully[0m
+[2025-11-21T23:54:22.326+0000] {subprocess.py:93} INFO - [0m23:54:22
+[2025-11-21T23:54:22.326+0000] {subprocess.py:93} INFO - [0m23:54:22  Done. PASS=1 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=1
+[2025-11-21T23:54:22.326+0000] {subprocess.py:93} INFO - [0m23:54:22  [[33mWARNING[0m][DeprecationsSummary]: Deprecated functionality
+[2025-11-21T23:54:22.326+0000] {subprocess.py:93} INFO - Summary of encountered deprecations:
+[2025-11-21T23:54:22.326+0000] {subprocess.py:93} INFO - - MissingArgumentsPropertyInGenericTestDeprecation: 1 occurrence
+[2025-11-21T23:54:22.327+0000] {subprocess.py:93} INFO - To see all deprecation instances instead of just the first occurrence of each,
+[2025-11-21T23:54:22.327+0000] {subprocess.py:93} INFO - run command again with the `--show-all-deprecations` flag. You may also need to
+[2025-11-21T23:54:22.327+0000] {subprocess.py:93} INFO - run with `--no-partial-parse` as some deprecations are only encountered during
+[2025-11-21T23:54:22.327+0000] {subprocess.py:93} INFO - parsing.
+[2025-11-21T23:54:22.875+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-11-21T23:54:22.884+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-11-21T23:54:22.884+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=elt_dbt_pipeline, task_id=dbt_run_mart, run_id=scheduled__2025-11-20T03:00:00+00:00, execution_date=20251120T030000, start_date=20251121T235415, end_date=20251121T235422
+[2025-11-21T23:54:22.894+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-11-21T23:54:22.900+0000] {taskinstance.py:3900} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-11-21T23:54:22.901+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

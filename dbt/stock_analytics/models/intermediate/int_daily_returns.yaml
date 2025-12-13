@@ -1,0 +1,8 @@
+version: 2
+
+models:
+  - name: int_daily_returns
+    columns:
+      - name: daily_return
+        tests:
+          - not_null

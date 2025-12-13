@@ -1,0 +1,18 @@
+version: 2
+
+seeds:
+  - name: sector_metadata
+    description: "Static mapping of Sector Tickers to Names and Approximate Weights."
+    config:
+      schema: SEEDS  # This puts the table in USER_DB_OSTRICH.PUBLIC_SEEDS (or similar)
+    columns:
+      - name: symbol
+        tests:
+          - unique
+          - not_null
+      - name: sector_name
+        tests:
+          - not_null
+      - name: approx_weight_pct
+        tests:
+          - not_null

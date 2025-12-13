@@ -1,0 +1,40 @@
+version: 2
+
+models:
+  - name: mart_risk_reward_scatter
+    description: "Daily history of 90-day Risk/Reward coordinates for every sector. Used for the Opportunity Scatter Plot."
+    columns:
+      - name: date
+        description: "The reference date for the 90-day window. Use this as a Dashboard Filter to 'Time Travel'."
+        tests:
+          - not_null
+
+      - name: symbol
+        description: "Ticker symbol (e.g. XLK, SPY)."
+        tests:
+          - not_null
+
+      - name: sector_name
+        description: "Full name (e.g. Technology). Used for tooltips."
+        tests:
+          - not_null
+
+      - name: approx_weight_pct
+        description: "Market Cap Weight (%). Used for Bubble Size."
+        
+      - name: avg_risk_beta
+        description: "Latest 90-day Rolling Beta. (X-Axis: Risk)."
+        tests:
+          - not_null
+
+      - name: total_return_pct
+        description: "Rolling 90-day Point-to-Point Return. (Y-Axis: Reward)."
+        tests:
+          - not_null
+
+      - name: investment_type
+        description: "Classification (Safety, Momentum, Toxic, Stagnant, Benchmark)."
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['Safety (Buy)', 'Momentum (Ride)', 'Toxic (Sell)', 'Stagnant (Avoid)', 'Benchmark']

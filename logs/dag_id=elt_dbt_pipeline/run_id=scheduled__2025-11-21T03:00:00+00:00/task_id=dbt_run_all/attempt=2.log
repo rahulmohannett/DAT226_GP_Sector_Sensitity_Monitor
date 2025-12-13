@@ -1,0 +1,157 @@
+[2025-11-22T18:39:48.852+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-11-22T18:39:48.863+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: elt_dbt_pipeline.dbt_run_all scheduled__2025-11-21T03:00:00+00:00 [queued]>
+[2025-11-22T18:39:48.873+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: elt_dbt_pipeline.dbt_run_all scheduled__2025-11-21T03:00:00+00:00 [queued]>
+[2025-11-22T18:39:48.873+0000] {taskinstance.py:2865} INFO - Starting attempt 2 of 2
+[2025-11-22T18:39:48.879+0000] {taskinstance.py:2888} INFO - Executing <Task(BashOperator): dbt_run_all> on 2025-11-21 03:00:00+00:00
+[2025-11-22T18:39:48.887+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=718) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-11-22T18:39:48.886+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'elt_dbt_pipeline', 'dbt_run_all', 'scheduled__2025-11-21T03:00:00+00:00', '--job-id', '11', '--raw', '--subdir', 'DAGS_FOLDER/elt_dbt_pipeline.py', '--cfg-path', '/tmp/tmp4871r89d']
+[2025-11-22T18:39:48.888+0000] {standard_task_runner.py:72} INFO - Started process 719 to run task
+[2025-11-22T18:39:48.888+0000] {standard_task_runner.py:105} INFO - Job 11: Subtask dbt_run_all
+[2025-11-22T18:39:48.914+0000] {task_command.py:467} INFO - Running <TaskInstance: elt_dbt_pipeline.dbt_run_all scheduled__2025-11-21T03:00:00+00:00 [running]> on host 599ab64e91dc
+[2025-11-22T18:39:48.946+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='elt_dbt_pipeline' AIRFLOW_CTX_TASK_ID='dbt_run_all' AIRFLOW_CTX_EXECUTION_DATE='2025-11-21T03:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-11-21T03:00:00+00:00'
+[2025-11-22T18:39:48.947+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-11-22T18:39:48.955+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-11-22T18:39:48.956+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'set -euo pipefail;cd /opt/***/dbt/stock_analytics && dbt debug --profiles-dir /opt/***/dbt && dbt run --profiles-dir /opt/***/dbt']
+[2025-11-22T18:39:48.959+0000] {subprocess.py:86} INFO - Output:
+[2025-11-22T18:39:49.910+0000] {subprocess.py:93} INFO - [0m18:39:49  Running with dbt=1.11.0-rc1
+[2025-11-22T18:39:49.914+0000] {subprocess.py:93} INFO - [0m18:39:49  dbt version: 1.11.0-rc1
+[2025-11-22T18:39:49.914+0000] {subprocess.py:93} INFO - [0m18:39:49  python version: 3.12.5
+[2025-11-22T18:39:49.915+0000] {subprocess.py:93} INFO - [0m18:39:49  python path: /opt/***/dbt_venv/bin/python3.12
+[2025-11-22T18:39:49.915+0000] {subprocess.py:93} INFO - [0m18:39:49  os info: Linux-6.10.14-linuxkit-aarch64-with-glibc2.36
+[2025-11-22T18:39:50.027+0000] {subprocess.py:93} INFO - [0m18:39:50  Using profiles dir at /opt/***/dbt
+[2025-11-22T18:39:50.028+0000] {subprocess.py:93} INFO - [0m18:39:50  Using profiles.yml file at /opt/***/dbt/profiles.yml
+[2025-11-22T18:39:50.028+0000] {subprocess.py:93} INFO - [0m18:39:50  Using dbt_project.yml file at /opt/***/dbt/stock_analytics/dbt_project.yml
+[2025-11-22T18:39:50.028+0000] {subprocess.py:93} INFO - [0m18:39:50  adapter type: snowflake
+[2025-11-22T18:39:50.028+0000] {subprocess.py:93} INFO - [0m18:39:50  adapter version: 1.10.3
+[2025-11-22T18:39:50.075+0000] {subprocess.py:93} INFO - [0m18:39:50  Configuration:
+[2025-11-22T18:39:50.075+0000] {subprocess.py:93} INFO - [0m18:39:50    profiles.yml file [[32mOK found and valid[0m]
+[2025-11-22T18:39:50.075+0000] {subprocess.py:93} INFO - [0m18:39:50    dbt_project.yml file [[32mOK found and valid[0m]
+[2025-11-22T18:39:50.075+0000] {subprocess.py:93} INFO - [0m18:39:50  Required dependencies:
+[2025-11-22T18:39:50.077+0000] {subprocess.py:93} INFO - [0m18:39:50   - git [[32mOK found[0m]
+[2025-11-22T18:39:50.077+0000] {subprocess.py:93} INFO - 
+[2025-11-22T18:39:50.078+0000] {subprocess.py:93} INFO - [0m18:39:50  Connection:
+[2025-11-22T18:39:50.078+0000] {subprocess.py:93} INFO - [0m18:39:50    account: sfedu02-lvb17920
+[2025-11-22T18:39:50.078+0000] {subprocess.py:93} INFO - [0m18:39:50    user: OSTRICH
+[2025-11-22T18:39:50.078+0000] {subprocess.py:93} INFO - [0m18:39:50    database: USER_DB_OSTRICH
+[2025-11-22T18:39:50.078+0000] {subprocess.py:93} INFO - [0m18:39:50    warehouse: OSTRICH_QUERY_WH
+[2025-11-22T18:39:50.078+0000] {subprocess.py:93} INFO - [0m18:39:50    role: TRAINING_ROLE
+[2025-11-22T18:39:50.079+0000] {subprocess.py:93} INFO - [0m18:39:50    schema: PUBLIC
+[2025-11-22T18:39:50.079+0000] {subprocess.py:93} INFO - [0m18:39:50    authenticator: None
+[2025-11-22T18:39:50.079+0000] {subprocess.py:93} INFO - [0m18:39:50    oauth_client_id: None
+[2025-11-22T18:39:50.079+0000] {subprocess.py:93} INFO - [0m18:39:50    query_tag: None
+[2025-11-22T18:39:50.079+0000] {subprocess.py:93} INFO - [0m18:39:50    client_session_keep_alive: False
+[2025-11-22T18:39:50.079+0000] {subprocess.py:93} INFO - [0m18:39:50    host: None
+[2025-11-22T18:39:50.080+0000] {subprocess.py:93} INFO - [0m18:39:50    port: None
+[2025-11-22T18:39:50.080+0000] {subprocess.py:93} INFO - [0m18:39:50    proxy_host: None
+[2025-11-22T18:39:50.080+0000] {subprocess.py:93} INFO - [0m18:39:50    proxy_port: None
+[2025-11-22T18:39:50.080+0000] {subprocess.py:93} INFO - [0m18:39:50    protocol: None
+[2025-11-22T18:39:50.080+0000] {subprocess.py:93} INFO - [0m18:39:50    connect_retries: 1
+[2025-11-22T18:39:50.080+0000] {subprocess.py:93} INFO - [0m18:39:50    connect_timeout: None
+[2025-11-22T18:39:50.081+0000] {subprocess.py:93} INFO - [0m18:39:50    retry_on_database_errors: False
+[2025-11-22T18:39:50.081+0000] {subprocess.py:93} INFO - [0m18:39:50    retry_all: False
+[2025-11-22T18:39:50.081+0000] {subprocess.py:93} INFO - [0m18:39:50    insecure_mode: False
+[2025-11-22T18:39:50.081+0000] {subprocess.py:93} INFO - [0m18:39:50    reuse_connections: True
+[2025-11-22T18:39:50.081+0000] {subprocess.py:93} INFO - [0m18:39:50    s3_stage_vpce_dns_name: None
+[2025-11-22T18:39:50.081+0000] {subprocess.py:93} INFO - [0m18:39:50    platform_detection_timeout_seconds: 0.0
+[2025-11-22T18:39:50.082+0000] {subprocess.py:93} INFO - [0m18:39:50  Registered adapter: snowflake=1.10.3
+[2025-11-22T18:39:50.569+0000] {subprocess.py:93} INFO - [0m18:39:50    Connection test: [[32mOK connection ok[0m]
+[2025-11-22T18:39:50.570+0000] {subprocess.py:93} INFO - 
+[2025-11-22T18:39:50.570+0000] {subprocess.py:93} INFO - [0m18:39:50  [32mAll checks passed![0m
+[2025-11-22T18:39:52.282+0000] {subprocess.py:93} INFO - [0m18:39:52  Running with dbt=1.11.0-rc1
+[2025-11-22T18:39:52.454+0000] {subprocess.py:93} INFO - [0m18:39:52  Registered adapter: snowflake=1.10.3
+[2025-11-22T18:39:52.823+0000] {subprocess.py:93} INFO - [0m18:39:52  Found 3 models, 8 data tests, 1 source, 504 macros
+[2025-11-22T18:39:52.824+0000] {subprocess.py:93} INFO - [0m18:39:52
+[2025-11-22T18:39:52.825+0000] {subprocess.py:93} INFO - [0m18:39:52  Concurrency: 4 threads (target='dev')
+[2025-11-22T18:39:52.825+0000] {subprocess.py:93} INFO - [0m18:39:52
+[2025-11-22T18:39:53.614+0000] {subprocess.py:93} INFO - [0m18:39:53  1 of 3 START sql view model PUBLIC_STAGING.stg_market_data ..................... [RUN]
+[2025-11-22T18:39:53.956+0000] {subprocess.py:93} INFO - [0m18:39:53  1 of 3 OK created sql view model PUBLIC_STAGING.stg_market_data ................ [[32mSUCCESS 1[0m in 0.34s]
+[2025-11-22T18:39:53.958+0000] {subprocess.py:93} INFO - [0m18:39:53  2 of 3 START sql view model PUBLIC_INTERMEDIATE.int_daily_returns .............. [RUN]
+[2025-11-22T18:39:54.317+0000] {subprocess.py:93} INFO - [0m18:39:54  2 of 3 OK created sql view model PUBLIC_INTERMEDIATE.int_daily_returns ......... [[32mSUCCESS 1[0m in 0.36s]
+[2025-11-22T18:39:54.321+0000] {subprocess.py:93} INFO - [0m18:39:54  3 of 3 START sql table model PUBLIC_ANALYTICS.mart_sector_volatility ........... [RUN]
+[2025-11-22T18:39:54.456+0000] {subprocess.py:93} INFO - [0m18:39:54  3 of 3 ERROR creating sql table model PUBLIC_ANALYTICS.mart_sector_volatility .. [[31mERROR[0m in 0.13s]
+[2025-11-22T18:39:54.796+0000] {subprocess.py:93} INFO - [0m18:39:54
+[2025-11-22T18:39:54.797+0000] {subprocess.py:93} INFO - [0m18:39:54  Finished running 1 table model, 2 view models in 0 hours 0 minutes and 1.97 seconds (1.97s).
+[2025-11-22T18:39:54.823+0000] {subprocess.py:93} INFO - [0m18:39:54
+[2025-11-22T18:39:54.823+0000] {subprocess.py:93} INFO - [0m18:39:54  [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[2025-11-22T18:39:54.823+0000] {subprocess.py:93} INFO - [0m18:39:54
+[2025-11-22T18:39:54.823+0000] {subprocess.py:93} INFO - [0m18:39:54  [31mFailure in model mart_sector_volatility (models/marts/mart_sector_volatility.sql)[0m
+[2025-11-22T18:39:54.824+0000] {subprocess.py:93} INFO - [0m18:39:54    Database Error in model mart_sector_volatility (models/marts/mart_sector_volatility.sql)
+[2025-11-22T18:39:54.824+0000] {subprocess.py:93} INFO -   002303 (0A000): SQL compilation error: error line 51 at position 8
+[2025-11-22T18:39:54.824+0000] {subprocess.py:93} INFO -   Sliding window frame unsupported for function COVAR_SAMP
+[2025-11-22T18:39:54.824+0000] {subprocess.py:93} INFO -   compiled code at target/run/stock_analytics/models/marts/mart_sector_volatility.sql
+[2025-11-22T18:39:54.824+0000] {subprocess.py:93} INFO - [0m18:39:54
+[2025-11-22T18:39:54.824+0000] {subprocess.py:93} INFO - [0m18:39:54    compiled code at target/compiled/stock_analytics/models/marts/mart_sector_volatility.sql
+[2025-11-22T18:39:54.824+0000] {subprocess.py:93} INFO - [0m18:39:54
+[2025-11-22T18:39:54.824+0000] {subprocess.py:93} INFO - [0m18:39:54  Done. PASS=2 WARN=0 ERROR=1 SKIP=0 NO-OP=0 TOTAL=3
+[2025-11-22T18:39:55.510+0000] {subprocess.py:97} INFO - Command exited with return code 1
+[2025-11-22T18:39:55.518+0000] {taskinstance.py:3310} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 406, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/bash.py", line 249, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2025-11-22T18:39:55.521+0000] {taskinstance.py:1225} INFO - Marking task as FAILED. dag_id=elt_dbt_pipeline, task_id=dbt_run_all, run_id=scheduled__2025-11-21T03:00:00+00:00, execution_date=20251121T030000, start_date=20251122T183948, end_date=20251122T183955
+[2025-11-22T18:39:55.529+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-11-22T18:39:55.529+0000] {standard_task_runner.py:124} ERROR - Failed to execute job 11 for task dbt_run_all (Bash command failed. The command returned a non-zero exit code 1.; 719)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/cli.py", line 115, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3004, in _run_raw_task
+    return _run_raw_task(
+           ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 273, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3158, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3182, in _execute_task
+    return _execute_task(self, context, task_orig)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 406, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/bash.py", line 249, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2025-11-22T18:39:55.551+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 1
+[2025-11-22T18:39:55.571+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-11-22T18:39:55.574+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

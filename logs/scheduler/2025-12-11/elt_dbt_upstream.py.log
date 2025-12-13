@@ -1,0 +1,77 @@
+[2025-12-11T00:00:14.602+0000] {processor.py:186} INFO - Started process (PID=31215) to work on /opt/airflow/dags/elt_dbt_upstream.py
+[2025-12-11T00:00:14.603+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/elt_dbt_upstream.py for tasks to queue
+[2025-12-11T00:00:14.604+0000] {logging_mixin.py:190} INFO - [2025-12-11T00:00:14.604+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/elt_dbt_upstream.py
+[2025-12-11T00:00:14.609+0000] {processor.py:925} INFO - DAG(s) 'elt_dbt_upstream' retrieved from /opt/airflow/dags/elt_dbt_upstream.py
+[2025-12-11T00:00:14.618+0000] {logging_mixin.py:190} INFO - [2025-12-11T00:00:14.618+0000] {dag.py:3229} INFO - Sync 1 DAGs
+[2025-12-11T00:00:14.626+0000] {logging_mixin.py:190} INFO - [2025-12-11T00:00:14.626+0000] {dag.py:4156} INFO - Setting next_dagrun for elt_dbt_upstream to 2025-12-10 03:00:00+00:00, run_after=2025-12-11 03:00:00+00:00
+[2025-12-11T00:00:14.632+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/elt_dbt_upstream.py took 0.033 seconds
+[2025-12-11T00:00:45.117+0000] {processor.py:186} INFO - Started process (PID=31241) to work on /opt/airflow/dags/elt_dbt_upstream.py
+[2025-12-11T00:00:45.117+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/elt_dbt_upstream.py for tasks to queue
+[2025-12-11T00:00:45.118+0000] {logging_mixin.py:190} INFO - [2025-12-11T00:00:45.118+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/elt_dbt_upstream.py
+[2025-12-11T00:00:45.123+0000] {processor.py:925} INFO - DAG(s) 'elt_dbt_upstream' retrieved from /opt/airflow/dags/elt_dbt_upstream.py
+[2025-12-11T00:00:45.132+0000] {logging_mixin.py:190} INFO - [2025-12-11T00:00:45.132+0000] {dag.py:3229} INFO - Sync 1 DAGs
+[2025-12-11T00:00:45.140+0000] {logging_mixin.py:190} INFO - [2025-12-11T00:00:45.140+0000] {dag.py:4156} INFO - Setting next_dagrun for elt_dbt_upstream to 2025-12-10 03:00:00+00:00, run_after=2025-12-11 03:00:00+00:00
+[2025-12-11T00:00:45.146+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/elt_dbt_upstream.py took 0.032 seconds
+[2025-12-11T00:01:15.557+0000] {processor.py:186} INFO - Started process (PID=31267) to work on /opt/airflow/dags/elt_dbt_upstream.py
+[2025-12-11T00:01:15.557+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/elt_dbt_upstream.py for tasks to queue
+[2025-12-11T00:01:15.558+0000] {logging_mixin.py:190} INFO - [2025-12-11T00:01:15.558+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/elt_dbt_upstream.py
+[2025-12-11T00:01:15.563+0000] {processor.py:925} INFO - DAG(s) 'elt_dbt_upstream' retrieved from /opt/airflow/dags/elt_dbt_upstream.py
+[2025-12-11T00:01:15.572+0000] {logging_mixin.py:190} INFO - [2025-12-11T00:01:15.572+0000] {dag.py:3229} INFO - Sync 1 DAGs
+[2025-12-11T00:01:15.580+0000] {logging_mixin.py:190} INFO - [2025-12-11T00:01:15.580+0000] {dag.py:4156} INFO - Setting next_dagrun for elt_dbt_upstream to 2025-12-10 03:00:00+00:00, run_after=2025-12-11 03:00:00+00:00
+[2025-12-11T00:01:15.585+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/elt_dbt_upstream.py took 0.031 seconds
+[2025-12-11T00:01:46.019+0000] {processor.py:186} INFO - Started process (PID=31293) to work on /opt/airflow/dags/elt_dbt_upstream.py
+[2025-12-11T00:01:46.020+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/elt_dbt_upstream.py for tasks to queue
+[2025-12-11T00:01:46.021+0000] {logging_mixin.py:190} INFO - [2025-12-11T00:01:46.021+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/elt_dbt_upstream.py
+[2025-12-11T00:01:46.026+0000] {processor.py:925} INFO - DAG(s) 'elt_dbt_upstream' retrieved from /opt/airflow/dags/elt_dbt_upstream.py
+[2025-12-11T00:01:46.034+0000] {logging_mixin.py:190} INFO - [2025-12-11T00:01:46.034+0000] {dag.py:3229} INFO - Sync 1 DAGs
+[2025-12-11T00:01:46.043+0000] {logging_mixin.py:190} INFO - [2025-12-11T00:01:46.042+0000] {dag.py:4156} INFO - Setting next_dagrun for elt_dbt_upstream to 2025-12-10 03:00:00+00:00, run_after=2025-12-11 03:00:00+00:00
+[2025-12-11T00:01:46.048+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/elt_dbt_upstream.py took 0.032 seconds
+[2025-12-11T00:02:16.613+0000] {processor.py:186} INFO - Started process (PID=31321) to work on /opt/airflow/dags/elt_dbt_upstream.py
+[2025-12-11T00:02:16.613+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/elt_dbt_upstream.py for tasks to queue
+[2025-12-11T00:02:16.615+0000] {logging_mixin.py:190} INFO - [2025-12-11T00:02:16.615+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/elt_dbt_upstream.py
+[2025-12-11T00:02:16.621+0000] {processor.py:925} INFO - DAG(s) 'elt_dbt_upstream' retrieved from /opt/airflow/dags/elt_dbt_upstream.py
+[2025-12-11T00:02:16.634+0000] {logging_mixin.py:190} INFO - [2025-12-11T00:02:16.634+0000] {dag.py:3229} INFO - Sync 1 DAGs
+[2025-12-11T00:02:16.644+0000] {logging_mixin.py:190} INFO - [2025-12-11T00:02:16.644+0000] {dag.py:4156} INFO - Setting next_dagrun for elt_dbt_upstream to 2025-12-10 03:00:00+00:00, run_after=2025-12-11 03:00:00+00:00
+[2025-12-11T00:02:16.651+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/elt_dbt_upstream.py took 0.041 seconds
+[2025-12-11T00:02:47.040+0000] {processor.py:186} INFO - Started process (PID=31345) to work on /opt/airflow/dags/elt_dbt_upstream.py
+[2025-12-11T00:02:47.041+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/elt_dbt_upstream.py for tasks to queue
+[2025-12-11T00:02:47.042+0000] {logging_mixin.py:190} INFO - [2025-12-11T00:02:47.042+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/elt_dbt_upstream.py
+[2025-12-11T00:02:47.046+0000] {processor.py:925} INFO - DAG(s) 'elt_dbt_upstream' retrieved from /opt/airflow/dags/elt_dbt_upstream.py
+[2025-12-11T00:02:47.055+0000] {logging_mixin.py:190} INFO - [2025-12-11T00:02:47.055+0000] {dag.py:3229} INFO - Sync 1 DAGs
+[2025-12-11T00:02:47.064+0000] {logging_mixin.py:190} INFO - [2025-12-11T00:02:47.064+0000] {dag.py:4156} INFO - Setting next_dagrun for elt_dbt_upstream to 2025-12-10 03:00:00+00:00, run_after=2025-12-11 03:00:00+00:00
+[2025-12-11T00:02:47.070+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/elt_dbt_upstream.py took 0.033 seconds
+[2025-12-11T00:03:17.440+0000] {processor.py:186} INFO - Started process (PID=31371) to work on /opt/airflow/dags/elt_dbt_upstream.py
+[2025-12-11T00:03:17.440+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/elt_dbt_upstream.py for tasks to queue
+[2025-12-11T00:03:17.441+0000] {logging_mixin.py:190} INFO - [2025-12-11T00:03:17.441+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/elt_dbt_upstream.py
+[2025-12-11T00:03:17.446+0000] {processor.py:925} INFO - DAG(s) 'elt_dbt_upstream' retrieved from /opt/airflow/dags/elt_dbt_upstream.py
+[2025-12-11T00:03:17.455+0000] {logging_mixin.py:190} INFO - [2025-12-11T00:03:17.454+0000] {dag.py:3229} INFO - Sync 1 DAGs
+[2025-12-11T00:03:17.463+0000] {logging_mixin.py:190} INFO - [2025-12-11T00:03:17.462+0000] {dag.py:4156} INFO - Setting next_dagrun for elt_dbt_upstream to 2025-12-10 03:00:00+00:00, run_after=2025-12-11 03:00:00+00:00
+[2025-12-11T00:03:17.468+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/elt_dbt_upstream.py took 0.031 seconds
+[2025-12-11T00:03:47.911+0000] {processor.py:186} INFO - Started process (PID=31397) to work on /opt/airflow/dags/elt_dbt_upstream.py
+[2025-12-11T00:03:47.912+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/elt_dbt_upstream.py for tasks to queue
+[2025-12-11T00:03:47.913+0000] {logging_mixin.py:190} INFO - [2025-12-11T00:03:47.912+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/elt_dbt_upstream.py
+[2025-12-11T00:03:47.917+0000] {processor.py:925} INFO - DAG(s) 'elt_dbt_upstream' retrieved from /opt/airflow/dags/elt_dbt_upstream.py
+[2025-12-11T00:03:47.926+0000] {logging_mixin.py:190} INFO - [2025-12-11T00:03:47.926+0000] {dag.py:3229} INFO - Sync 1 DAGs
+[2025-12-11T00:03:47.934+0000] {logging_mixin.py:190} INFO - [2025-12-11T00:03:47.934+0000] {dag.py:4156} INFO - Setting next_dagrun for elt_dbt_upstream to 2025-12-10 03:00:00+00:00, run_after=2025-12-11 03:00:00+00:00
+[2025-12-11T00:03:47.939+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/elt_dbt_upstream.py took 0.031 seconds
+[2025-12-11T00:04:18.366+0000] {processor.py:186} INFO - Started process (PID=31423) to work on /opt/airflow/dags/elt_dbt_upstream.py
+[2025-12-11T00:04:18.367+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/elt_dbt_upstream.py for tasks to queue
+[2025-12-11T00:04:18.368+0000] {logging_mixin.py:190} INFO - [2025-12-11T00:04:18.368+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/elt_dbt_upstream.py
+[2025-12-11T00:04:18.372+0000] {processor.py:925} INFO - DAG(s) 'elt_dbt_upstream' retrieved from /opt/airflow/dags/elt_dbt_upstream.py
+[2025-12-11T00:04:18.381+0000] {logging_mixin.py:190} INFO - [2025-12-11T00:04:18.381+0000] {dag.py:3229} INFO - Sync 1 DAGs
+[2025-12-11T00:04:18.389+0000] {logging_mixin.py:190} INFO - [2025-12-11T00:04:18.389+0000] {dag.py:4156} INFO - Setting next_dagrun for elt_dbt_upstream to 2025-12-10 03:00:00+00:00, run_after=2025-12-11 03:00:00+00:00
+[2025-12-11T00:04:18.395+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/elt_dbt_upstream.py took 0.031 seconds
+[2025-12-11T00:04:48.828+0000] {processor.py:186} INFO - Started process (PID=31449) to work on /opt/airflow/dags/elt_dbt_upstream.py
+[2025-12-11T00:04:48.829+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/elt_dbt_upstream.py for tasks to queue
+[2025-12-11T00:04:48.830+0000] {logging_mixin.py:190} INFO - [2025-12-11T00:04:48.830+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/elt_dbt_upstream.py
+[2025-12-11T00:04:48.834+0000] {processor.py:925} INFO - DAG(s) 'elt_dbt_upstream' retrieved from /opt/airflow/dags/elt_dbt_upstream.py
+[2025-12-11T00:04:48.843+0000] {logging_mixin.py:190} INFO - [2025-12-11T00:04:48.843+0000] {dag.py:3229} INFO - Sync 1 DAGs
+[2025-12-11T00:04:48.852+0000] {logging_mixin.py:190} INFO - [2025-12-11T00:04:48.852+0000] {dag.py:4156} INFO - Setting next_dagrun for elt_dbt_upstream to 2025-12-10 03:00:00+00:00, run_after=2025-12-11 03:00:00+00:00
+[2025-12-11T00:04:48.857+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/elt_dbt_upstream.py took 0.031 seconds
+[2025-12-11T00:05:19.275+0000] {processor.py:186} INFO - Started process (PID=31475) to work on /opt/airflow/dags/elt_dbt_upstream.py
+[2025-12-11T00:05:19.275+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/elt_dbt_upstream.py for tasks to queue
+[2025-12-11T00:05:19.278+0000] {logging_mixin.py:190} INFO - [2025-12-11T00:05:19.277+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/elt_dbt_upstream.py
+[2025-12-11T00:05:19.291+0000] {processor.py:925} INFO - DAG(s) 'elt_dbt_upstream' retrieved from /opt/airflow/dags/elt_dbt_upstream.py
+[2025-12-11T00:05:19.303+0000] {logging_mixin.py:190} INFO - [2025-12-11T00:05:19.303+0000] {dag.py:3229} INFO - Sync 1 DAGs
+[2025-12-11T00:05:19.315+0000] {logging_mixin.py:190} INFO - [2025-12-11T00:05:19.314+0000] {dag.py:4156} INFO - Setting next_dagrun for elt_dbt_upstream to 2025-12-10 03:00:00+00:00, run_after=2025-12-11 03:00:00+00:00
+[2025-12-11T00:05:19.321+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/elt_dbt_upstream.py took 0.050 seconds

@@ -1,0 +1,77 @@
+[2025-12-11T00:00:14.543+0000] {processor.py:186} INFO - Started process (PID=31210) to work on /opt/airflow/dags/market_data_ingest.py
+[2025-12-11T00:00:14.544+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/market_data_ingest.py for tasks to queue
+[2025-12-11T00:00:14.546+0000] {logging_mixin.py:190} INFO - [2025-12-11T00:00:14.546+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/market_data_ingest.py
+[2025-12-11T00:00:14.714+0000] {processor.py:925} INFO - DAG(s) 'market_data_ingest' retrieved from /opt/airflow/dags/market_data_ingest.py
+[2025-12-11T00:00:14.719+0000] {logging_mixin.py:190} INFO - [2025-12-11T00:00:14.718+0000] {dag.py:3229} INFO - Sync 1 DAGs
+[2025-12-11T00:00:14.726+0000] {logging_mixin.py:190} INFO - [2025-12-11T00:00:14.726+0000] {dag.py:4156} INFO - Setting next_dagrun for market_data_ingest to 2025-12-10 02:30:00+00:00, run_after=2025-12-11 02:30:00+00:00
+[2025-12-11T00:00:14.731+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/market_data_ingest.py took 0.192 seconds
+[2025-12-11T00:00:45.057+0000] {processor.py:186} INFO - Started process (PID=31236) to work on /opt/airflow/dags/market_data_ingest.py
+[2025-12-11T00:00:45.060+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/market_data_ingest.py for tasks to queue
+[2025-12-11T00:00:45.062+0000] {logging_mixin.py:190} INFO - [2025-12-11T00:00:45.062+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/market_data_ingest.py
+[2025-12-11T00:00:45.225+0000] {processor.py:925} INFO - DAG(s) 'market_data_ingest' retrieved from /opt/airflow/dags/market_data_ingest.py
+[2025-12-11T00:00:45.301+0000] {logging_mixin.py:190} INFO - [2025-12-11T00:00:45.300+0000] {dag.py:3229} INFO - Sync 1 DAGs
+[2025-12-11T00:00:45.307+0000] {logging_mixin.py:190} INFO - [2025-12-11T00:00:45.307+0000] {dag.py:4156} INFO - Setting next_dagrun for market_data_ingest to 2025-12-10 02:30:00+00:00, run_after=2025-12-11 02:30:00+00:00
+[2025-12-11T00:00:45.312+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/market_data_ingest.py took 0.258 seconds
+[2025-12-11T00:01:15.502+0000] {processor.py:186} INFO - Started process (PID=31262) to work on /opt/airflow/dags/market_data_ingest.py
+[2025-12-11T00:01:15.502+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/market_data_ingest.py for tasks to queue
+[2025-12-11T00:01:15.504+0000] {logging_mixin.py:190} INFO - [2025-12-11T00:01:15.504+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/market_data_ingest.py
+[2025-12-11T00:01:15.669+0000] {processor.py:925} INFO - DAG(s) 'market_data_ingest' retrieved from /opt/airflow/dags/market_data_ingest.py
+[2025-12-11T00:01:15.673+0000] {logging_mixin.py:190} INFO - [2025-12-11T00:01:15.673+0000] {dag.py:3229} INFO - Sync 1 DAGs
+[2025-12-11T00:01:15.680+0000] {logging_mixin.py:190} INFO - [2025-12-11T00:01:15.680+0000] {dag.py:4156} INFO - Setting next_dagrun for market_data_ingest to 2025-12-10 02:30:00+00:00, run_after=2025-12-11 02:30:00+00:00
+[2025-12-11T00:01:15.685+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/market_data_ingest.py took 0.188 seconds
+[2025-12-11T00:01:45.966+0000] {processor.py:186} INFO - Started process (PID=31288) to work on /opt/airflow/dags/market_data_ingest.py
+[2025-12-11T00:01:45.967+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/market_data_ingest.py for tasks to queue
+[2025-12-11T00:01:45.968+0000] {logging_mixin.py:190} INFO - [2025-12-11T00:01:45.968+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/market_data_ingest.py
+[2025-12-11T00:01:46.130+0000] {processor.py:925} INFO - DAG(s) 'market_data_ingest' retrieved from /opt/airflow/dags/market_data_ingest.py
+[2025-12-11T00:01:46.135+0000] {logging_mixin.py:190} INFO - [2025-12-11T00:01:46.134+0000] {dag.py:3229} INFO - Sync 1 DAGs
+[2025-12-11T00:01:46.142+0000] {logging_mixin.py:190} INFO - [2025-12-11T00:01:46.142+0000] {dag.py:4156} INFO - Setting next_dagrun for market_data_ingest to 2025-12-10 02:30:00+00:00, run_after=2025-12-11 02:30:00+00:00
+[2025-12-11T00:01:46.217+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/market_data_ingest.py took 0.255 seconds
+[2025-12-11T00:02:16.411+0000] {processor.py:186} INFO - Started process (PID=31314) to work on /opt/airflow/dags/market_data_ingest.py
+[2025-12-11T00:02:16.412+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/market_data_ingest.py for tasks to queue
+[2025-12-11T00:02:16.416+0000] {logging_mixin.py:190} INFO - [2025-12-11T00:02:16.416+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/market_data_ingest.py
+[2025-12-11T00:02:16.579+0000] {processor.py:925} INFO - DAG(s) 'market_data_ingest' retrieved from /opt/airflow/dags/market_data_ingest.py
+[2025-12-11T00:02:16.584+0000] {logging_mixin.py:190} INFO - [2025-12-11T00:02:16.584+0000] {dag.py:3229} INFO - Sync 1 DAGs
+[2025-12-11T00:02:16.592+0000] {logging_mixin.py:190} INFO - [2025-12-11T00:02:16.592+0000] {dag.py:4156} INFO - Setting next_dagrun for market_data_ingest to 2025-12-10 02:30:00+00:00, run_after=2025-12-11 02:30:00+00:00
+[2025-12-11T00:02:16.598+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/market_data_ingest.py took 0.192 seconds
+[2025-12-11T00:02:46.981+0000] {processor.py:186} INFO - Started process (PID=31340) to work on /opt/airflow/dags/market_data_ingest.py
+[2025-12-11T00:02:46.984+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/market_data_ingest.py for tasks to queue
+[2025-12-11T00:02:46.987+0000] {logging_mixin.py:190} INFO - [2025-12-11T00:02:46.986+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/market_data_ingest.py
+[2025-12-11T00:02:47.146+0000] {processor.py:925} INFO - DAG(s) 'market_data_ingest' retrieved from /opt/airflow/dags/market_data_ingest.py
+[2025-12-11T00:02:47.222+0000] {logging_mixin.py:190} INFO - [2025-12-11T00:02:47.222+0000] {dag.py:3229} INFO - Sync 1 DAGs
+[2025-12-11T00:02:47.229+0000] {logging_mixin.py:190} INFO - [2025-12-11T00:02:47.229+0000] {dag.py:4156} INFO - Setting next_dagrun for market_data_ingest to 2025-12-10 02:30:00+00:00, run_after=2025-12-11 02:30:00+00:00
+[2025-12-11T00:02:47.235+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/market_data_ingest.py took 0.258 seconds
+[2025-12-11T00:03:17.387+0000] {processor.py:186} INFO - Started process (PID=31366) to work on /opt/airflow/dags/market_data_ingest.py
+[2025-12-11T00:03:17.388+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/market_data_ingest.py for tasks to queue
+[2025-12-11T00:03:17.390+0000] {logging_mixin.py:190} INFO - [2025-12-11T00:03:17.390+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/market_data_ingest.py
+[2025-12-11T00:03:17.622+0000] {processor.py:925} INFO - DAG(s) 'market_data_ingest' retrieved from /opt/airflow/dags/market_data_ingest.py
+[2025-12-11T00:03:17.627+0000] {logging_mixin.py:190} INFO - [2025-12-11T00:03:17.626+0000] {dag.py:3229} INFO - Sync 1 DAGs
+[2025-12-11T00:03:17.633+0000] {logging_mixin.py:190} INFO - [2025-12-11T00:03:17.633+0000] {dag.py:4156} INFO - Setting next_dagrun for market_data_ingest to 2025-12-10 02:30:00+00:00, run_after=2025-12-11 02:30:00+00:00
+[2025-12-11T00:03:17.638+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/market_data_ingest.py took 0.254 seconds
+[2025-12-11T00:03:47.861+0000] {processor.py:186} INFO - Started process (PID=31392) to work on /opt/airflow/dags/market_data_ingest.py
+[2025-12-11T00:03:47.864+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/market_data_ingest.py for tasks to queue
+[2025-12-11T00:03:47.865+0000] {logging_mixin.py:190} INFO - [2025-12-11T00:03:47.865+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/market_data_ingest.py
+[2025-12-11T00:03:48.030+0000] {processor.py:925} INFO - DAG(s) 'market_data_ingest' retrieved from /opt/airflow/dags/market_data_ingest.py
+[2025-12-11T00:03:48.034+0000] {logging_mixin.py:190} INFO - [2025-12-11T00:03:48.034+0000] {dag.py:3229} INFO - Sync 1 DAGs
+[2025-12-11T00:03:48.042+0000] {logging_mixin.py:190} INFO - [2025-12-11T00:03:48.042+0000] {dag.py:4156} INFO - Setting next_dagrun for market_data_ingest to 2025-12-10 02:30:00+00:00, run_after=2025-12-11 02:30:00+00:00
+[2025-12-11T00:03:48.117+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/market_data_ingest.py took 0.261 seconds
+[2025-12-11T00:04:18.312+0000] {processor.py:186} INFO - Started process (PID=31418) to work on /opt/airflow/dags/market_data_ingest.py
+[2025-12-11T00:04:18.317+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/market_data_ingest.py for tasks to queue
+[2025-12-11T00:04:18.319+0000] {logging_mixin.py:190} INFO - [2025-12-11T00:04:18.319+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/market_data_ingest.py
+[2025-12-11T00:04:18.481+0000] {processor.py:925} INFO - DAG(s) 'market_data_ingest' retrieved from /opt/airflow/dags/market_data_ingest.py
+[2025-12-11T00:04:18.485+0000] {logging_mixin.py:190} INFO - [2025-12-11T00:04:18.485+0000] {dag.py:3229} INFO - Sync 1 DAGs
+[2025-12-11T00:04:18.563+0000] {logging_mixin.py:190} INFO - [2025-12-11T00:04:18.563+0000] {dag.py:4156} INFO - Setting next_dagrun for market_data_ingest to 2025-12-10 02:30:00+00:00, run_after=2025-12-11 02:30:00+00:00
+[2025-12-11T00:04:18.568+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/market_data_ingest.py took 0.260 seconds
+[2025-12-11T00:04:48.773+0000] {processor.py:186} INFO - Started process (PID=31444) to work on /opt/airflow/dags/market_data_ingest.py
+[2025-12-11T00:04:48.775+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/market_data_ingest.py for tasks to queue
+[2025-12-11T00:04:48.776+0000] {logging_mixin.py:190} INFO - [2025-12-11T00:04:48.776+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/market_data_ingest.py
+[2025-12-11T00:04:48.938+0000] {processor.py:925} INFO - DAG(s) 'market_data_ingest' retrieved from /opt/airflow/dags/market_data_ingest.py
+[2025-12-11T00:04:49.014+0000] {logging_mixin.py:190} INFO - [2025-12-11T00:04:49.014+0000] {dag.py:3229} INFO - Sync 1 DAGs
+[2025-12-11T00:04:49.021+0000] {logging_mixin.py:190} INFO - [2025-12-11T00:04:49.021+0000] {dag.py:4156} INFO - Setting next_dagrun for market_data_ingest to 2025-12-10 02:30:00+00:00, run_after=2025-12-11 02:30:00+00:00
+[2025-12-11T00:04:49.026+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/market_data_ingest.py took 0.256 seconds
+[2025-12-11T00:05:19.187+0000] {processor.py:186} INFO - Started process (PID=31470) to work on /opt/airflow/dags/market_data_ingest.py
+[2025-12-11T00:05:19.191+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/market_data_ingest.py for tasks to queue
+[2025-12-11T00:05:19.195+0000] {logging_mixin.py:190} INFO - [2025-12-11T00:05:19.195+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/market_data_ingest.py
+[2025-12-11T00:05:19.521+0000] {processor.py:925} INFO - DAG(s) 'market_data_ingest' retrieved from /opt/airflow/dags/market_data_ingest.py
+[2025-12-11T00:05:19.526+0000] {logging_mixin.py:190} INFO - [2025-12-11T00:05:19.526+0000] {dag.py:3229} INFO - Sync 1 DAGs
+[2025-12-11T00:05:19.538+0000] {logging_mixin.py:190} INFO - [2025-12-11T00:05:19.538+0000] {dag.py:4156} INFO - Setting next_dagrun for market_data_ingest to 2025-12-10 02:30:00+00:00, run_after=2025-12-11 02:30:00+00:00
+[2025-12-11T00:05:19.547+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/market_data_ingest.py took 0.365 seconds

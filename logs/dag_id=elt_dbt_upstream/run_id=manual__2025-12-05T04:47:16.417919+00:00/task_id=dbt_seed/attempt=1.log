@@ -1,0 +1,35 @@
+[2025-12-05T04:47:31.835+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-12-05T04:47:31.842+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: elt_dbt_upstream.dbt_seed manual__2025-12-05T04:47:16.417919+00:00 [queued]>
+[2025-12-05T04:47:31.845+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: elt_dbt_upstream.dbt_seed manual__2025-12-05T04:47:16.417919+00:00 [queued]>
+[2025-12-05T04:47:31.845+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 2
+[2025-12-05T04:47:31.849+0000] {taskinstance.py:2888} INFO - Executing <Task(BashOperator): dbt_seed> on 2025-12-05 04:47:16.417919+00:00
+[2025-12-05T04:47:31.852+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=5263) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-12-05T04:47:31.852+0000] {standard_task_runner.py:72} INFO - Started process 5264 to run task
+[2025-12-05T04:47:31.852+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'elt_dbt_upstream', 'dbt_seed', 'manual__2025-12-05T04:47:16.417919+00:00', '--job-id', '217', '--raw', '--subdir', 'DAGS_FOLDER/elt_dbt_upstream.py', '--cfg-path', '/tmp/tmpk_tll6bt']
+[2025-12-05T04:47:31.853+0000] {standard_task_runner.py:105} INFO - Job 217: Subtask dbt_seed
+[2025-12-05T04:47:31.869+0000] {task_command.py:467} INFO - Running <TaskInstance: elt_dbt_upstream.dbt_seed manual__2025-12-05T04:47:16.417919+00:00 [running]> on host 3a991512098d
+[2025-12-05T04:47:31.894+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='elt_dbt_upstream' AIRFLOW_CTX_TASK_ID='dbt_seed' AIRFLOW_CTX_EXECUTION_DATE='2025-12-05T04:47:16.417919+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-12-05T04:47:16.417919+00:00'
+[2025-12-05T04:47:31.895+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-12-05T04:47:31.900+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-12-05T04:47:31.901+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'set -euo pipefail;cd /opt/***/dbt/stock_analytics && dbt seed --profiles-dir /opt/***/dbt']
+[2025-12-05T04:47:31.903+0000] {subprocess.py:86} INFO - Output:
+[2025-12-05T04:47:32.801+0000] {subprocess.py:93} INFO - [0m04:47:32  Running with dbt=1.11.0-rc1
+[2025-12-05T04:47:32.976+0000] {subprocess.py:93} INFO - [0m04:47:32  Registered adapter: snowflake=1.10.3
+[2025-12-05T04:47:33.195+0000] {subprocess.py:93} INFO - [0m04:47:33  Found 6 models, 30 data tests, 1 seed, 2 sources, 504 macros
+[2025-12-05T04:47:33.196+0000] {subprocess.py:93} INFO - [0m04:47:33
+[2025-12-05T04:47:33.196+0000] {subprocess.py:93} INFO - [0m04:47:33  Concurrency: 4 threads (target='dev')
+[2025-12-05T04:47:33.197+0000] {subprocess.py:93} INFO - [0m04:47:33
+[2025-12-05T04:47:34.404+0000] {subprocess.py:93} INFO - [0m04:47:34  1 of 1 START seed file PUBLIC_SEEDS.sector_metadata ............................ [RUN]
+[2025-12-05T04:47:36.502+0000] {subprocess.py:93} INFO - [0m04:47:36  1 of 1 OK loaded seed file PUBLIC_SEEDS.sector_metadata ........................ [[32mINSERT 11[0m in 2.10s]
+[2025-12-05T04:47:37.138+0000] {subprocess.py:93} INFO - [0m04:47:37
+[2025-12-05T04:47:37.139+0000] {subprocess.py:93} INFO - [0m04:47:37  Finished running 1 seed in 0 hours 0 minutes and 3.94 seconds (3.94s).
+[2025-12-05T04:47:37.184+0000] {subprocess.py:93} INFO - [0m04:47:37
+[2025-12-05T04:47:37.184+0000] {subprocess.py:93} INFO - [0m04:47:37  [32mCompleted successfully[0m
+[2025-12-05T04:47:37.184+0000] {subprocess.py:93} INFO - [0m04:47:37
+[2025-12-05T04:47:37.184+0000] {subprocess.py:93} INFO - [0m04:47:37  Done. PASS=1 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=1
+[2025-12-05T04:47:37.786+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-12-05T04:47:37.794+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-12-05T04:47:37.795+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=elt_dbt_upstream, task_id=dbt_seed, run_id=manual__2025-12-05T04:47:16.417919+00:00, execution_date=20251205T044716, start_date=20251205T044731, end_date=20251205T044737
+[2025-12-05T04:47:37.806+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-12-05T04:47:37.815+0000] {taskinstance.py:3900} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-12-05T04:47:37.815+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

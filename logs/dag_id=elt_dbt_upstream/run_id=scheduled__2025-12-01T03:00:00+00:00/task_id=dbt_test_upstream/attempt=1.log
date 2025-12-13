@@ -1,0 +1,61 @@
+[2025-12-02T20:48:28.173+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-12-02T20:48:28.180+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: elt_dbt_upstream.dbt_test_upstream scheduled__2025-12-01T03:00:00+00:00 [queued]>
+[2025-12-02T20:48:28.182+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: elt_dbt_upstream.dbt_test_upstream scheduled__2025-12-01T03:00:00+00:00 [queued]>
+[2025-12-02T20:48:28.183+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 2
+[2025-12-02T20:48:28.187+0000] {taskinstance.py:2888} INFO - Executing <Task(BashOperator): dbt_test_upstream> on 2025-12-01 03:00:00+00:00
+[2025-12-02T20:48:28.191+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'elt_dbt_upstream', 'dbt_test_upstream', 'scheduled__2025-12-01T03:00:00+00:00', '--job-id', '78', '--raw', '--subdir', 'DAGS_FOLDER/elt_dbt_upstream.py', '--cfg-path', '/tmp/tmp30ty0_e1']
+[2025-12-02T20:48:28.192+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=544) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-12-02T20:48:28.192+0000] {standard_task_runner.py:105} INFO - Job 78: Subtask dbt_test_upstream
+[2025-12-02T20:48:28.192+0000] {standard_task_runner.py:72} INFO - Started process 546 to run task
+[2025-12-02T20:48:28.210+0000] {task_command.py:467} INFO - Running <TaskInstance: elt_dbt_upstream.dbt_test_upstream scheduled__2025-12-01T03:00:00+00:00 [running]> on host 2e122a66e6c3
+[2025-12-02T20:48:28.240+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='elt_dbt_upstream' AIRFLOW_CTX_TASK_ID='dbt_test_upstream' AIRFLOW_CTX_EXECUTION_DATE='2025-12-01T03:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-12-01T03:00:00+00:00'
+[2025-12-02T20:48:28.241+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-12-02T20:48:28.246+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-12-02T20:48:28.247+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'set -euo pipefail;cd /opt/***/dbt/stock_analytics && dbt test --select +mart_sector_volatility --profiles-dir /opt/***/dbt']
+[2025-12-02T20:48:28.250+0000] {subprocess.py:86} INFO - Output:
+[2025-12-02T20:48:29.193+0000] {subprocess.py:93} INFO - [0m20:48:29  Running with dbt=1.11.0-rc1
+[2025-12-02T20:48:29.361+0000] {subprocess.py:93} INFO - [0m20:48:29  Registered adapter: snowflake=1.10.3
+[2025-12-02T20:48:29.578+0000] {subprocess.py:93} INFO - [0m20:48:29  Found 6 models, 27 data tests, 1 seed, 2 sources, 504 macros
+[2025-12-02T20:48:29.580+0000] {subprocess.py:93} INFO - [0m20:48:29
+[2025-12-02T20:48:29.580+0000] {subprocess.py:93} INFO - [0m20:48:29  Concurrency: 4 threads (target='dev')
+[2025-12-02T20:48:29.580+0000] {subprocess.py:93} INFO - [0m20:48:29
+[2025-12-02T20:48:30.149+0000] {subprocess.py:93} INFO - [0m20:48:30  1 of 14 START test not_null_int_daily_returns_daily_return ..................... [RUN]
+[2025-12-02T20:48:30.152+0000] {subprocess.py:93} INFO - [0m20:48:30  2 of 14 START test not_null_mart_sector_volatility_date ........................ [RUN]
+[2025-12-02T20:48:30.152+0000] {subprocess.py:93} INFO - [0m20:48:30  3 of 14 START test not_null_mart_sector_volatility_rolling_beta ................ [RUN]
+[2025-12-02T20:48:30.154+0000] {subprocess.py:93} INFO - [0m20:48:30  4 of 14 START test not_null_mart_sector_volatility_sector_name ................. [RUN]
+[2025-12-02T20:48:30.414+0000] {subprocess.py:93} INFO - [0m20:48:30  3 of 14 PASS not_null_mart_sector_volatility_rolling_beta ...................... [[32mPASS[0m in 0.26s]
+[2025-12-02T20:48:30.418+0000] {subprocess.py:93} INFO - [0m20:48:30  2 of 14 PASS not_null_mart_sector_volatility_date .............................. [[32mPASS[0m in 0.26s]
+[2025-12-02T20:48:30.418+0000] {subprocess.py:93} INFO - [0m20:48:30  5 of 14 START test not_null_mart_sector_volatility_symbol ...................... [RUN]
+[2025-12-02T20:48:30.420+0000] {subprocess.py:93} INFO - [0m20:48:30  6 of 14 START test not_null_mart_sector_volatility_weighted_impact ............. [RUN]
+[2025-12-02T20:48:30.427+0000] {subprocess.py:93} INFO - [0m20:48:30  4 of 14 PASS not_null_mart_sector_volatility_sector_name ....................... [[32mPASS[0m in 0.27s]
+[2025-12-02T20:48:30.433+0000] {subprocess.py:93} INFO - [0m20:48:30  7 of 14 START test not_null_sector_metadata_approx_weight_pct .................. [RUN]
+[2025-12-02T20:48:30.532+0000] {subprocess.py:93} INFO - [0m20:48:30  1 of 14 PASS not_null_int_daily_returns_daily_return ........................... [[32mPASS[0m in 0.38s]
+[2025-12-02T20:48:30.533+0000] {subprocess.py:93} INFO - [0m20:48:30  8 of 14 START test not_null_sector_metadata_sector_name ........................ [RUN]
+[2025-12-02T20:48:30.619+0000] {subprocess.py:93} INFO - [0m20:48:30  6 of 14 PASS not_null_mart_sector_volatility_weighted_impact ................... [[32mPASS[0m in 0.19s]
+[2025-12-02T20:48:30.620+0000] {subprocess.py:93} INFO - [0m20:48:30  9 of 14 START test not_null_sector_metadata_symbol ............................. [RUN]
+[2025-12-02T20:48:30.647+0000] {subprocess.py:93} INFO - [0m20:48:30  5 of 14 PASS not_null_mart_sector_volatility_symbol ............................ [[32mPASS[0m in 0.23s]
+[2025-12-02T20:48:30.648+0000] {subprocess.py:93} INFO - [0m20:48:30  10 of 14 START test not_null_stg_market_data_close ............................. [RUN]
+[2025-12-02T20:48:30.670+0000] {subprocess.py:93} INFO - [0m20:48:30  8 of 14 PASS not_null_sector_metadata_sector_name .............................. [[32mPASS[0m in 0.14s]
+[2025-12-02T20:48:30.671+0000] {subprocess.py:93} INFO - [0m20:48:30  11 of 14 START test not_null_stg_market_data_pk_symbol_date .................... [RUN]
+[2025-12-02T20:48:30.694+0000] {subprocess.py:93} INFO - [0m20:48:30  7 of 14 PASS not_null_sector_metadata_approx_weight_pct ........................ [[32mPASS[0m in 0.26s]
+[2025-12-02T20:48:30.695+0000] {subprocess.py:93} INFO - [0m20:48:30  12 of 14 START test not_null_stg_market_data_symbol ............................ [RUN]
+[2025-12-02T20:48:30.770+0000] {subprocess.py:93} INFO - [0m20:48:30  10 of 14 PASS not_null_stg_market_data_close ................................... [[32mPASS[0m in 0.12s]
+[2025-12-02T20:48:30.771+0000] {subprocess.py:93} INFO - [0m20:48:30  13 of 14 START test unique_sector_metadata_symbol .............................. [RUN]
+[2025-12-02T20:48:30.800+0000] {subprocess.py:93} INFO - [0m20:48:30  9 of 14 PASS not_null_sector_metadata_symbol ................................... [[32mPASS[0m in 0.18s]
+[2025-12-02T20:48:30.801+0000] {subprocess.py:93} INFO - [0m20:48:30  14 of 14 START test unique_stg_market_data_pk_symbol_date ...................... [RUN]
+[2025-12-02T20:48:30.912+0000] {subprocess.py:93} INFO - [0m20:48:30  12 of 14 PASS not_null_stg_market_data_symbol .................................. [[32mPASS[0m in 0.22s]
+[2025-12-02T20:48:30.947+0000] {subprocess.py:93} INFO - [0m20:48:30  11 of 14 PASS not_null_stg_market_data_pk_symbol_date .......................... [[32mPASS[0m in 0.27s]
+[2025-12-02T20:48:31.006+0000] {subprocess.py:93} INFO - [0m20:48:31  13 of 14 PASS unique_sector_metadata_symbol .................................... [[32mPASS[0m in 0.23s]
+[2025-12-02T20:48:31.122+0000] {subprocess.py:93} INFO - [0m20:48:31  14 of 14 PASS unique_stg_market_data_pk_symbol_date ............................ [[32mPASS[0m in 0.32s]
+[2025-12-02T20:48:32.117+0000] {subprocess.py:93} INFO - [0m20:48:32
+[2025-12-02T20:48:32.117+0000] {subprocess.py:93} INFO - [0m20:48:32  Finished running 14 data tests in 0 hours 0 minutes and 2.54 seconds (2.54s).
+[2025-12-02T20:48:32.140+0000] {subprocess.py:93} INFO - [0m20:48:32
+[2025-12-02T20:48:32.141+0000] {subprocess.py:93} INFO - [0m20:48:32  [32mCompleted successfully[0m
+[2025-12-02T20:48:32.141+0000] {subprocess.py:93} INFO - [0m20:48:32
+[2025-12-02T20:48:32.141+0000] {subprocess.py:93} INFO - [0m20:48:32  Done. PASS=14 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=14
+[2025-12-02T20:48:32.672+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-12-02T20:48:32.681+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-12-02T20:48:32.682+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=elt_dbt_upstream, task_id=dbt_test_upstream, run_id=scheduled__2025-12-01T03:00:00+00:00, execution_date=20251201T030000, start_date=20251202T204828, end_date=20251202T204832
+[2025-12-02T20:48:32.690+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-12-02T20:48:32.696+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-12-02T20:48:32.696+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

@@ -1,0 +1,44 @@
+[2025-12-10T02:36:29.083+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-12-10T02:36:29.089+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: market_data_ingest.dq_no_dupes scheduled__2025-12-09T02:30:00+00:00 [queued]>
+[2025-12-10T02:36:29.091+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: market_data_ingest.dq_no_dupes scheduled__2025-12-09T02:30:00+00:00 [queued]>
+[2025-12-10T02:36:29.092+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 2
+[2025-12-10T02:36:29.095+0000] {taskinstance.py:2888} INFO - Executing <Task(SnowflakeOperator): dq_no_dupes> on 2025-12-09 02:30:00+00:00
+[2025-12-10T02:36:29.099+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=10515) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-12-10T02:36:29.100+0000] {standard_task_runner.py:72} INFO - Started process 10524 to run task
+[2025-12-10T02:36:29.100+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'market_data_ingest', 'dq_no_dupes', 'scheduled__2025-12-09T02:30:00+00:00', '--job-id', '423', '--raw', '--subdir', 'DAGS_FOLDER/market_data_ingest.py', '--cfg-path', '/tmp/tmpng9lg5kr']
+[2025-12-10T02:36:29.101+0000] {standard_task_runner.py:105} INFO - Job 423: Subtask dq_no_dupes
+[2025-12-10T02:36:29.118+0000] {task_command.py:467} INFO - Running <TaskInstance: market_data_ingest.dq_no_dupes scheduled__2025-12-09T02:30:00+00:00 [running]> on host 7c17d7f5e8b7
+[2025-12-10T02:36:29.249+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='data' AIRFLOW_CTX_DAG_ID='market_data_ingest' AIRFLOW_CTX_TASK_ID='dq_no_dupes' AIRFLOW_CTX_EXECUTION_DATE='2025-12-09T02:30:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-12-09T02:30:00+00:00'
+[2025-12-10T02:36:29.249+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-12-10T02:36:29.253+0000] {sql.py:266} INFO - Executing: 
+            select count(*) from (
+              select SYMBOL, DATE, count(*) 
+              from "USER_DB_OSTRICH"."RAW"."MARKET_DATA"
+              group by 1,2 
+              having count(*) > 1
+            ) having count(*) = 0
+        
+[2025-12-10T02:36:29.256+0000] {base.py:84} INFO - Retrieving connection 'snowflake_conn'
+[2025-12-10T02:36:29.259+0000] {base.py:84} INFO - Retrieving connection 'snowflake_conn'
+[2025-12-10T02:36:29.259+0000] {connection.py:413} INFO - Snowflake Connector for Python Version: 3.12.1, Python Version: 3.12.5, Platform: Linux-6.10.14-linuxkit-aarch64-with-glibc2.36
+[2025-12-10T02:36:29.259+0000] {connection.py:1196} INFO - Connecting to GLOBAL Snowflake domain
+[2025-12-10T02:36:29.259+0000] {connection.py:1277} INFO - This connection is in OCSP Fail Open Mode. TLS Certificates would be checked for validity and revocation status. Any other Certificate Revocation related exceptions or OCSP Responder failures would be disregarded in favor of connectivity.
+[2025-12-10T02:36:29.723+0000] {cursor.py:1156} INFO - Number of results in first chunk: 1
+[2025-12-10T02:36:29.724+0000] {sql.py:509} INFO - Running statement: select count(*) from (
+              select SYMBOL, DATE, count(*) 
+              from "USER_DB_OSTRICH"."RAW"."MARKET_DATA"
+              group by 1,2 
+              having count(*) > 1
+            ) having count(*) = 0, parameters: None
+[2025-12-10T02:36:30.152+0000] {cursor.py:1156} INFO - Number of results in first chunk: 1
+[2025-12-10T02:36:30.153+0000] {sql.py:518} INFO - Rows affected: 1
+[2025-12-10T02:36:30.155+0000] {snowflake.py:422} INFO - Rows affected: 1
+[2025-12-10T02:36:30.155+0000] {snowflake.py:423} INFO - Snowflake query id: 01c0f29c-0107-3545-000f-c0df00e771ee
+[2025-12-10T02:36:30.215+0000] {cursor.py:1156} INFO - Number of results in first chunk: 1
+[2025-12-10T02:36:30.216+0000] {connection.py:788} INFO - closed
+[2025-12-10T02:36:30.265+0000] {connection.py:794} INFO - No async queries seem to be running, deleting session
+[2025-12-10T02:36:30.372+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-12-10T02:36:30.373+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=market_data_ingest, task_id=dq_no_dupes, run_id=scheduled__2025-12-09T02:30:00+00:00, execution_date=20251209T023000, start_date=20251210T023629, end_date=20251210T023630
+[2025-12-10T02:36:30.396+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-12-10T02:36:30.405+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-12-10T02:36:30.406+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

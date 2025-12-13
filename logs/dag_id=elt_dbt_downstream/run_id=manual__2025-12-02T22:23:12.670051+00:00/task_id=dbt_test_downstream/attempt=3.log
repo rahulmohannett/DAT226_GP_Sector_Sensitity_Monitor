@@ -1,0 +1,136 @@
+[2025-12-02T22:47:59.963+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-12-02T22:47:59.970+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: elt_dbt_downstream.dbt_test_downstream manual__2025-12-02T22:23:12.670051+00:00 [queued]>
+[2025-12-02T22:47:59.972+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: elt_dbt_downstream.dbt_test_downstream manual__2025-12-02T22:23:12.670051+00:00 [queued]>
+[2025-12-02T22:47:59.972+0000] {taskinstance.py:2865} INFO - Starting attempt 3 of 4
+[2025-12-02T22:47:59.976+0000] {taskinstance.py:2888} INFO - Executing <Task(BashOperator): dbt_test_downstream> on 2025-12-02 22:23:12.670051+00:00
+[2025-12-02T22:47:59.981+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'elt_dbt_downstream', 'dbt_test_downstream', 'manual__2025-12-02T22:23:12.670051+00:00', '--job-id', '137', '--raw', '--subdir', 'DAGS_FOLDER/elt_dbt_downstream.py', '--cfg-path', '/tmp/tmp333e2fwp']
+[2025-12-02T22:47:59.982+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=1076) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-12-02T22:47:59.982+0000] {standard_task_runner.py:105} INFO - Job 137: Subtask dbt_test_downstream
+[2025-12-02T22:47:59.983+0000] {standard_task_runner.py:72} INFO - Started process 1077 to run task
+[2025-12-02T22:47:59.999+0000] {task_command.py:467} INFO - Running <TaskInstance: elt_dbt_downstream.dbt_test_downstream manual__2025-12-02T22:23:12.670051+00:00 [running]> on host 7687cf4a9cf6
+[2025-12-02T22:48:00.028+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='elt_dbt_downstream' AIRFLOW_CTX_TASK_ID='dbt_test_downstream' AIRFLOW_CTX_EXECUTION_DATE='2025-12-02T22:23:12.670051+00:00' AIRFLOW_CTX_TRY_NUMBER='3' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-12-02T22:23:12.670051+00:00'
+[2025-12-02T22:48:00.028+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-12-02T22:48:00.034+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-12-02T22:48:00.035+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'set -euo pipefail;cd /opt/***/dbt/stock_analytics && dbt test --select mart_forecast_combined mart_risk_reward_scatter mart_market_regime --profiles-dir /opt/***/dbt']
+[2025-12-02T22:48:00.038+0000] {subprocess.py:86} INFO - Output:
+[2025-12-02T22:48:00.911+0000] {subprocess.py:93} INFO - [0m22:48:00  Running with dbt=1.11.0-rc1
+[2025-12-02T22:48:01.079+0000] {subprocess.py:93} INFO - [0m22:48:01  Registered adapter: snowflake=1.10.3
+[2025-12-02T22:48:01.429+0000] {subprocess.py:93} INFO - [0m22:48:01  Found 6 models, 30 data tests, 1 seed, 2 sources, 504 macros
+[2025-12-02T22:48:01.430+0000] {subprocess.py:93} INFO - [0m22:48:01
+[2025-12-02T22:48:01.431+0000] {subprocess.py:93} INFO - [0m22:48:01  Concurrency: 4 threads (target='dev')
+[2025-12-02T22:48:01.431+0000] {subprocess.py:93} INFO - [0m22:48:01
+[2025-12-02T22:48:02.622+0000] {subprocess.py:93} INFO - [0m22:48:02  1 of 16 START test accepted_values_mart_forecast_combined_type__history__forecast  [RUN]
+[2025-12-02T22:48:02.623+0000] {subprocess.py:93} INFO - [0m22:48:02  2 of 16 START test accepted_values_mart_risk_reward_scatter_investment_type__Safety_Buy___Momentum_Ride___Toxic_Sell___Stagnant_Avoid___Benchmark  [RUN]
+[2025-12-02T22:48:02.624+0000] {subprocess.py:93} INFO - [0m22:48:02  3 of 16 START test not_null_mart_forecast_combined_date ........................ [RUN]
+[2025-12-02T22:48:02.624+0000] {subprocess.py:93} INFO - [0m22:48:02  4 of 16 START test not_null_mart_forecast_combined_sector_name ................. [RUN]
+[2025-12-02T22:48:02.761+0000] {subprocess.py:93} INFO - [0m22:48:02  1 of 16 PASS accepted_values_mart_forecast_combined_type__history__forecast .... [[32mPASS[0m in 0.14s]
+[2025-12-02T22:48:02.762+0000] {subprocess.py:93} INFO - [0m22:48:02  5 of 16 START test not_null_mart_forecast_combined_symbol ...................... [RUN]
+[2025-12-02T22:48:02.768+0000] {subprocess.py:93} INFO - [0m22:48:02  4 of 16 PASS not_null_mart_forecast_combined_sector_name ....................... [[32mPASS[0m in 0.14s]
+[2025-12-02T22:48:02.771+0000] {subprocess.py:93} INFO - [0m22:48:02  6 of 16 START test not_null_mart_forecast_combined_type ........................ [RUN]
+[2025-12-02T22:48:02.793+0000] {subprocess.py:93} INFO - [0m22:48:02  2 of 16 PASS accepted_values_mart_risk_reward_scatter_investment_type__Safety_Buy___Momentum_Ride___Toxic_Sell___Stagnant_Avoid___Benchmark  [[32mPASS[0m in 0.17s]
+[2025-12-02T22:48:02.794+0000] {subprocess.py:93} INFO - [0m22:48:02  7 of 16 START test not_null_mart_market_regime_date ............................ [RUN]
+[2025-12-02T22:48:02.804+0000] {subprocess.py:93} INFO - [0m22:48:02  3 of 16 PASS not_null_mart_forecast_combined_date .............................. [[32mPASS[0m in 0.18s]
+[2025-12-02T22:48:02.805+0000] {subprocess.py:93} INFO - [0m22:48:02  8 of 16 START test not_null_mart_market_regime_tech_bubble_ratio ............... [RUN]
+[2025-12-02T22:48:02.876+0000] {subprocess.py:93} INFO - [0m22:48:02  6 of 16 PASS not_null_mart_forecast_combined_type .............................. [[32mPASS[0m in 0.10s]
+[2025-12-02T22:48:02.877+0000] {subprocess.py:93} INFO - [0m22:48:02  9 of 16 START test not_null_mart_risk_reward_scatter_avg_risk_beta ............. [RUN]
+[2025-12-02T22:48:02.883+0000] {subprocess.py:93} INFO - [0m22:48:02  5 of 16 PASS not_null_mart_forecast_combined_symbol ............................ [[32mPASS[0m in 0.12s]
+[2025-12-02T22:48:02.884+0000] {subprocess.py:93} INFO - [0m22:48:02  10 of 16 START test not_null_mart_risk_reward_scatter_investment_type .......... [RUN]
+[2025-12-02T22:48:02.908+0000] {subprocess.py:93} INFO - [0m22:48:02  7 of 16 PASS not_null_mart_market_regime_date .................................. [[32mPASS[0m in 0.11s]
+[2025-12-02T22:48:02.909+0000] {subprocess.py:93} INFO - [0m22:48:02  11 of 16 START test not_null_mart_risk_reward_scatter_sector_name .............. [RUN]
+[2025-12-02T22:48:02.919+0000] {subprocess.py:93} INFO - [0m22:48:02  8 of 16 FAIL 1 not_null_mart_market_regime_tech_bubble_ratio ................... [[31mFAIL 1[0m in 0.11s]
+[2025-12-02T22:48:02.920+0000] {subprocess.py:93} INFO - [0m22:48:02  12 of 16 START test not_null_mart_risk_reward_scatter_symbol ................... [RUN]
+[2025-12-02T22:48:02.969+0000] {subprocess.py:93} INFO - [0m22:48:02  10 of 16 PASS not_null_mart_risk_reward_scatter_investment_type ................ [[32mPASS[0m in 0.08s]
+[2025-12-02T22:48:02.970+0000] {subprocess.py:93} INFO - [0m22:48:02  13 of 16 START test not_null_mart_risk_reward_scatter_total_return_pct ......... [RUN]
+[2025-12-02T22:48:03.044+0000] {subprocess.py:93} INFO - [0m22:48:03  9 of 16 PASS not_null_mart_risk_reward_scatter_avg_risk_beta ................... [[32mPASS[0m in 0.17s]
+[2025-12-02T22:48:03.046+0000] {subprocess.py:93} INFO - [0m22:48:03  14 of 16 START test unique_mart_forecast_combined__symbol_date_ ................ [RUN]
+[2025-12-02T22:48:03.048+0000] {subprocess.py:93} INFO - [0m22:48:03  12 of 16 PASS not_null_mart_risk_reward_scatter_symbol ......................... [[32mPASS[0m in 0.13s]
+[2025-12-02T22:48:03.054+0000] {subprocess.py:93} INFO - [0m22:48:03  15 of 16 START test unique_mart_market_regime_date ............................. [RUN]
+[2025-12-02T22:48:03.074+0000] {subprocess.py:93} INFO - [0m22:48:03  13 of 16 PASS not_null_mart_risk_reward_scatter_total_return_pct ............... [[32mPASS[0m in 0.10s]
+[2025-12-02T22:48:03.075+0000] {subprocess.py:93} INFO - [0m22:48:03  16 of 16 START test unique_mart_risk_reward_scatter_symbol ..................... [RUN]
+[2025-12-02T22:48:03.077+0000] {subprocess.py:93} INFO - [0m22:48:03  11 of 16 PASS not_null_mart_risk_reward_scatter_sector_name .................... [[32mPASS[0m in 0.17s]
+[2025-12-02T22:48:03.151+0000] {subprocess.py:93} INFO - [0m22:48:03  14 of 16 PASS unique_mart_forecast_combined__symbol_date_ ...................... [[32mPASS[0m in 0.10s]
+[2025-12-02T22:48:03.164+0000] {subprocess.py:93} INFO - [0m22:48:03  15 of 16 PASS unique_mart_market_regime_date ................................... [[32mPASS[0m in 0.11s]
+[2025-12-02T22:48:03.166+0000] {subprocess.py:93} INFO - [0m22:48:03  16 of 16 PASS unique_mart_risk_reward_scatter_symbol ........................... [[32mPASS[0m in 0.09s]
+[2025-12-02T22:48:03.945+0000] {subprocess.py:93} INFO - [0m22:48:03
+[2025-12-02T22:48:03.948+0000] {subprocess.py:93} INFO - [0m22:48:03  Finished running 16 data tests in 0 hours 0 minutes and 2.51 seconds (2.51s).
+[2025-12-02T22:48:04.039+0000] {subprocess.py:93} INFO - [0m22:48:04
+[2025-12-02T22:48:04.039+0000] {subprocess.py:93} INFO - [0m22:48:04  [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[2025-12-02T22:48:04.039+0000] {subprocess.py:93} INFO - [0m22:48:04
+[2025-12-02T22:48:04.040+0000] {subprocess.py:93} INFO - [0m22:48:04  [31mFailure in test not_null_mart_market_regime_tech_bubble_ratio (models/marts/mart_market_regime.yml)[0m
+[2025-12-02T22:48:04.040+0000] {subprocess.py:93} INFO - [0m22:48:04    Got 1 result, configured to fail if != 0
+[2025-12-02T22:48:04.040+0000] {subprocess.py:93} INFO - [0m22:48:04
+[2025-12-02T22:48:04.040+0000] {subprocess.py:93} INFO - [0m22:48:04    compiled code at target/compiled/stock_analytics/models/marts/mart_market_regime.yml/not_null_mart_market_regime_tech_bubble_ratio.sql
+[2025-12-02T22:48:04.041+0000] {subprocess.py:93} INFO - [0m22:48:04
+[2025-12-02T22:48:04.041+0000] {subprocess.py:93} INFO - [0m22:48:04  Done. PASS=15 WARN=0 ERROR=1 SKIP=0 NO-OP=0 TOTAL=16
+[2025-12-02T22:48:04.632+0000] {subprocess.py:97} INFO - Command exited with return code 1
+[2025-12-02T22:48:04.641+0000] {taskinstance.py:3310} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 406, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/bash.py", line 249, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2025-12-02T22:48:04.645+0000] {taskinstance.py:1225} INFO - Marking task as UP_FOR_RETRY. dag_id=elt_dbt_downstream, task_id=dbt_test_downstream, run_id=manual__2025-12-02T22:23:12.670051+00:00, execution_date=20251202T222312, start_date=20251202T224759, end_date=20251202T224804
+[2025-12-02T22:48:04.656+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-12-02T22:48:04.657+0000] {standard_task_runner.py:124} ERROR - Failed to execute job 137 for task dbt_test_downstream (Bash command failed. The command returned a non-zero exit code 1.; 1077)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/cli.py", line 115, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3004, in _run_raw_task
+    return _run_raw_task(
+           ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 273, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3158, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3182, in _execute_task
+    return _execute_task(self, context, task_orig)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 406, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/bash.py", line 249, in execute
+    raise AirflowException(
+airflow.exceptions.AirflowException: Bash command failed. The command returned a non-zero exit code 1.
+[2025-12-02T22:48:04.696+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 1
+[2025-12-02T22:48:04.705+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-12-02T22:48:04.706+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

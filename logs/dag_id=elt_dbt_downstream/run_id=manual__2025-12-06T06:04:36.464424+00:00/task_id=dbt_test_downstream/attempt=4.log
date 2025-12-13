@@ -1,0 +1,65 @@
+[2025-12-06T06:37:36.619+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-12-06T06:37:36.625+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: elt_dbt_downstream.dbt_test_downstream manual__2025-12-06T06:04:36.464424+00:00 [queued]>
+[2025-12-06T06:37:36.628+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: elt_dbt_downstream.dbt_test_downstream manual__2025-12-06T06:04:36.464424+00:00 [queued]>
+[2025-12-06T06:37:36.628+0000] {taskinstance.py:2865} INFO - Starting attempt 4 of 5
+[2025-12-06T06:37:36.633+0000] {taskinstance.py:2888} INFO - Executing <Task(BashOperator): dbt_test_downstream> on 2025-12-06 06:04:36.464424+00:00
+[2025-12-06T06:37:36.636+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=25284) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-12-06T06:37:36.637+0000] {standard_task_runner.py:72} INFO - Started process 25285 to run task
+[2025-12-06T06:37:36.636+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'elt_dbt_downstream', 'dbt_test_downstream', 'manual__2025-12-06T06:04:36.464424+00:00', '--job-id', '359', '--raw', '--subdir', 'DAGS_FOLDER/elt_dbt_downstream.py', '--cfg-path', '/tmp/tmpva86xrcf']
+[2025-12-06T06:37:36.638+0000] {standard_task_runner.py:105} INFO - Job 359: Subtask dbt_test_downstream
+[2025-12-06T06:37:36.653+0000] {task_command.py:467} INFO - Running <TaskInstance: elt_dbt_downstream.dbt_test_downstream manual__2025-12-06T06:04:36.464424+00:00 [running]> on host 7c17d7f5e8b7
+[2025-12-06T06:37:36.678+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='elt_dbt_downstream' AIRFLOW_CTX_TASK_ID='dbt_test_downstream' AIRFLOW_CTX_EXECUTION_DATE='2025-12-06T06:04:36.464424+00:00' AIRFLOW_CTX_TRY_NUMBER='4' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-12-06T06:04:36.464424+00:00'
+[2025-12-06T06:37:36.678+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-12-06T06:37:36.683+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-12-06T06:37:36.684+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'set -euo pipefail;cd /opt/***/dbt/stock_analytics && dbt test --select mart_forecast_combined mart_risk_reward_scatter mart_market_regime --profiles-dir /opt/***/dbt']
+[2025-12-06T06:37:36.687+0000] {subprocess.py:86} INFO - Output:
+[2025-12-06T06:37:37.617+0000] {subprocess.py:93} INFO - [0m06:37:37  Running with dbt=1.11.0-rc1
+[2025-12-06T06:37:37.804+0000] {subprocess.py:93} INFO - [0m06:37:37  Registered adapter: snowflake=1.10.3
+[2025-12-06T06:37:38.045+0000] {subprocess.py:93} INFO - [0m06:37:38  Found 6 models, 30 data tests, 1 seed, 2 sources, 504 macros
+[2025-12-06T06:37:38.047+0000] {subprocess.py:93} INFO - [0m06:37:38
+[2025-12-06T06:37:38.047+0000] {subprocess.py:93} INFO - [0m06:37:38  Concurrency: 4 threads (target='dev')
+[2025-12-06T06:37:38.047+0000] {subprocess.py:93} INFO - [0m06:37:38
+[2025-12-06T06:37:38.590+0000] {subprocess.py:93} INFO - [0m06:37:38  1 of 16 START test accepted_values_mart_forecast_combined_type__history__forecast  [RUN]
+[2025-12-06T06:37:38.591+0000] {subprocess.py:93} INFO - [0m06:37:38  2 of 16 START test accepted_values_mart_risk_reward_scatter_investment_type__Safety_Buy___Momentum_Ride___Toxic_Sell___Stagnant_Avoid___Benchmark  [RUN]
+[2025-12-06T06:37:38.591+0000] {subprocess.py:93} INFO - [0m06:37:38  3 of 16 START test not_null_mart_forecast_combined_date ........................ [RUN]
+[2025-12-06T06:37:38.592+0000] {subprocess.py:93} INFO - [0m06:37:38  4 of 16 START test not_null_mart_forecast_combined_sector_name ................. [RUN]
+[2025-12-06T06:37:38.834+0000] {subprocess.py:93} INFO - [0m06:37:38  3 of 16 PASS not_null_mart_forecast_combined_date .............................. [[32mPASS[0m in 0.24s]
+[2025-12-06T06:37:38.838+0000] {subprocess.py:93} INFO - [0m06:37:38  5 of 16 START test not_null_mart_forecast_combined_symbol ...................... [RUN]
+[2025-12-06T06:37:38.840+0000] {subprocess.py:93} INFO - [0m06:37:38  4 of 16 PASS not_null_mart_forecast_combined_sector_name ....................... [[32mPASS[0m in 0.25s]
+[2025-12-06T06:37:38.847+0000] {subprocess.py:93} INFO - [0m06:37:38  6 of 16 START test not_null_mart_forecast_combined_type ........................ [RUN]
+[2025-12-06T06:37:38.856+0000] {subprocess.py:93} INFO - [0m06:37:38  2 of 16 PASS accepted_values_mart_risk_reward_scatter_investment_type__Safety_Buy___Momentum_Ride___Toxic_Sell___Stagnant_Avoid___Benchmark  [[32mPASS[0m in 0.26s]
+[2025-12-06T06:37:38.861+0000] {subprocess.py:93} INFO - [0m06:37:38  1 of 16 PASS accepted_values_mart_forecast_combined_type__history__forecast .... [[32mPASS[0m in 0.27s]
+[2025-12-06T06:37:38.862+0000] {subprocess.py:93} INFO - [0m06:37:38  7 of 16 START test not_null_mart_market_regime_date ............................ [RUN]
+[2025-12-06T06:37:38.865+0000] {subprocess.py:93} INFO - [0m06:37:38  8 of 16 START test not_null_mart_market_regime_tech_bubble_ratio ............... [RUN]
+[2025-12-06T06:37:38.963+0000] {subprocess.py:93} INFO - [0m06:37:38  5 of 16 PASS not_null_mart_forecast_combined_symbol ............................ [[32mPASS[0m in 0.12s]
+[2025-12-06T06:37:38.964+0000] {subprocess.py:93} INFO - [0m06:37:38  9 of 16 START test not_null_mart_risk_reward_scatter_avg_risk_beta ............. [RUN]
+[2025-12-06T06:37:39.034+0000] {subprocess.py:93} INFO - [0m06:37:39  6 of 16 PASS not_null_mart_forecast_combined_type .............................. [[32mPASS[0m in 0.19s]
+[2025-12-06T06:37:39.035+0000] {subprocess.py:93} INFO - [0m06:37:39  10 of 16 START test not_null_mart_risk_reward_scatter_date ..................... [RUN]
+[2025-12-06T06:37:39.111+0000] {subprocess.py:93} INFO - [0m06:37:39  7 of 16 PASS not_null_mart_market_regime_date .................................. [[32mPASS[0m in 0.25s]
+[2025-12-06T06:37:39.113+0000] {subprocess.py:93} INFO - [0m06:37:39  11 of 16 START test not_null_mart_risk_reward_scatter_investment_type .......... [RUN]
+[2025-12-06T06:37:39.122+0000] {subprocess.py:93} INFO - [0m06:37:39  8 of 16 PASS not_null_mart_market_regime_tech_bubble_ratio ..................... [[32mPASS[0m in 0.26s]
+[2025-12-06T06:37:39.125+0000] {subprocess.py:93} INFO - [0m06:37:39  12 of 16 START test not_null_mart_risk_reward_scatter_sector_name .............. [RUN]
+[2025-12-06T06:37:39.176+0000] {subprocess.py:93} INFO - [0m06:37:39  9 of 16 PASS not_null_mart_risk_reward_scatter_avg_risk_beta ................... [[32mPASS[0m in 0.21s]
+[2025-12-06T06:37:39.177+0000] {subprocess.py:93} INFO - [0m06:37:39  13 of 16 START test not_null_mart_risk_reward_scatter_symbol ................... [RUN]
+[2025-12-06T06:37:39.227+0000] {subprocess.py:93} INFO - [0m06:37:39  11 of 16 PASS not_null_mart_risk_reward_scatter_investment_type ................ [[32mPASS[0m in 0.11s]
+[2025-12-06T06:37:39.228+0000] {subprocess.py:93} INFO - [0m06:37:39  14 of 16 START test not_null_mart_risk_reward_scatter_total_return_pct ......... [RUN]
+[2025-12-06T06:37:39.276+0000] {subprocess.py:93} INFO - [0m06:37:39  10 of 16 PASS not_null_mart_risk_reward_scatter_date ........................... [[32mPASS[0m in 0.24s]
+[2025-12-06T06:37:39.278+0000] {subprocess.py:93} INFO - [0m06:37:39  15 of 16 START test unique_mart_forecast_combined__symbol_date_ ................ [RUN]
+[2025-12-06T06:37:39.296+0000] {subprocess.py:93} INFO - [0m06:37:39  12 of 16 PASS not_null_mart_risk_reward_scatter_sector_name .................... [[32mPASS[0m in 0.17s]
+[2025-12-06T06:37:39.299+0000] {subprocess.py:93} INFO - [0m06:37:39  13 of 16 PASS not_null_mart_risk_reward_scatter_symbol ......................... [[32mPASS[0m in 0.12s]
+[2025-12-06T06:37:39.299+0000] {subprocess.py:93} INFO - [0m06:37:39  16 of 16 START test unique_mart_market_regime_date ............................. [RUN]
+[2025-12-06T06:37:39.359+0000] {subprocess.py:93} INFO - [0m06:37:39  14 of 16 PASS not_null_mart_risk_reward_scatter_total_return_pct ............... [[32mPASS[0m in 0.13s]
+[2025-12-06T06:37:39.458+0000] {subprocess.py:93} INFO - [0m06:37:39  16 of 16 PASS unique_mart_market_regime_date ................................... [[32mPASS[0m in 0.16s]
+[2025-12-06T06:37:39.527+0000] {subprocess.py:93} INFO - [0m06:37:39  15 of 16 PASS unique_mart_forecast_combined__symbol_date_ ...................... [[32mPASS[0m in 0.25s]
+[2025-12-06T06:37:40.427+0000] {subprocess.py:93} INFO - [0m06:37:40
+[2025-12-06T06:37:40.429+0000] {subprocess.py:93} INFO - [0m06:37:40  Finished running 16 data tests in 0 hours 0 minutes and 2.38 seconds (2.38s).
+[2025-12-06T06:37:40.477+0000] {subprocess.py:93} INFO - [0m06:37:40
+[2025-12-06T06:37:40.477+0000] {subprocess.py:93} INFO - [0m06:37:40  [32mCompleted successfully[0m
+[2025-12-06T06:37:40.478+0000] {subprocess.py:93} INFO - [0m06:37:40
+[2025-12-06T06:37:40.478+0000] {subprocess.py:93} INFO - [0m06:37:40  Done. PASS=16 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=16
+[2025-12-06T06:37:41.038+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-12-06T06:37:41.049+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-12-06T06:37:41.049+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=elt_dbt_downstream, task_id=dbt_test_downstream, run_id=manual__2025-12-06T06:04:36.464424+00:00, execution_date=20251206T060436, start_date=20251206T063736, end_date=20251206T063741
+[2025-12-06T06:37:41.081+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-12-06T06:37:41.088+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-12-06T06:37:41.089+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

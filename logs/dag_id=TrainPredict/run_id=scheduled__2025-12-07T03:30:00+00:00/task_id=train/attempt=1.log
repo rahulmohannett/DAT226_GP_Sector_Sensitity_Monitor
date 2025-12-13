@@ -1,0 +1,27 @@
+[2025-12-08T03:32:11.588+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-12-08T03:32:11.595+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: TrainPredict.train scheduled__2025-12-07T03:30:00+00:00 [queued]>
+[2025-12-08T03:32:11.598+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: TrainPredict.train scheduled__2025-12-07T03:30:00+00:00 [queued]>
+[2025-12-08T03:32:11.598+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2025-12-08T03:32:11.601+0000] {taskinstance.py:2888} INFO - Executing <Task(_PythonDecoratedOperator): train> on 2025-12-07 03:30:00+00:00
+[2025-12-08T03:32:11.605+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=66389) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-12-08T03:32:11.605+0000] {standard_task_runner.py:72} INFO - Started process 66392 to run task
+[2025-12-08T03:32:11.605+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'TrainPredict', 'train', 'scheduled__2025-12-07T03:30:00+00:00', '--job-id', '390', '--raw', '--subdir', 'DAGS_FOLDER/train_predict.py', '--cfg-path', '/tmp/tmp26w2d26h']
+[2025-12-08T03:32:11.606+0000] {standard_task_runner.py:105} INFO - Job 390: Subtask train
+[2025-12-08T03:32:11.623+0000] {task_command.py:467} INFO - Running <TaskInstance: TrainPredict.train scheduled__2025-12-07T03:30:00+00:00 [running]> on host 7c17d7f5e8b7
+[2025-12-08T03:32:11.655+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='TrainPredict' AIRFLOW_CTX_TASK_ID='train' AIRFLOW_CTX_EXECUTION_DATE='2025-12-07T03:30:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-12-07T03:30:00+00:00'
+[2025-12-08T03:32:11.655+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-12-08T03:32:11.660+0000] {base.py:84} INFO - Retrieving connection 'snowflake_conn'
+[2025-12-08T03:32:11.661+0000] {connection.py:413} INFO - Snowflake Connector for Python Version: 3.12.1, Python Version: 3.12.5, Platform: Linux-6.10.14-linuxkit-aarch64-with-glibc2.36
+[2025-12-08T03:32:11.661+0000] {connection.py:1196} INFO - Connecting to GLOBAL Snowflake domain
+[2025-12-08T03:32:11.661+0000] {connection.py:1277} INFO - This connection is in OCSP Fail Open Mode. TLS Certificates would be checked for validity and revocation status. Any other Certificate Revocation related exceptions or OCSP Responder failures would be disregarded in favor of connectivity.
+[2025-12-08T03:32:13.690+0000] {cursor.py:1156} INFO - Number of results in first chunk: 1
+[2025-12-08T03:49:10.055+0000] {job.py:229} INFO - Heartbeat recovered after 902.60 seconds
+[2025-12-08T03:49:15.116+0000] {local_task_job_runner.py:346} WARNING - State of this instance has been externally set to failed. Terminating instance.
+[2025-12-08T03:49:15.117+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2025-12-08T03:49:15.119+0000] {process_utils.py:132} INFO - Sending 15 to group 66392. PIDs of all processes in the group: [66392]
+[2025-12-08T03:49:15.119+0000] {process_utils.py:87} INFO - Sending the signal 15 to group 66392
+[2025-12-08T03:49:15.120+0000] {taskinstance.py:3092} ERROR - Received SIGTERM. Terminating subprocesses.
+[2025-12-08T03:49:15.124+0000] {connection.py:788} INFO - closed
+[2025-12-08T03:49:15.477+0000] {connection.py:794} INFO - No async queries seem to be running, deleting session
+[2025-12-08T03:49:15.569+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-12-08T03:49:15.586+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=66392, status='terminated', exitcode=0, started='03:32:11') (66392) terminated with exit code 0

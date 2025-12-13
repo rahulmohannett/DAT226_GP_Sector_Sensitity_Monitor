@@ -1,0 +1,23 @@
+[2025-11-23T03:10:09.370+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-11-23T03:10:09.380+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: elt_dbt_upstream.wait_for_market_data_ingest scheduled__2025-11-22T03:00:00+00:00 [queued]>
+[2025-11-23T03:10:09.383+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: elt_dbt_upstream.wait_for_market_data_ingest scheduled__2025-11-22T03:00:00+00:00 [queued]>
+[2025-11-23T03:10:09.383+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 2
+[2025-11-23T03:10:09.387+0000] {taskinstance.py:2888} INFO - Executing <Task(ExternalTaskSensor): wait_for_market_data_ingest> on 2025-11-22 03:00:00+00:00
+[2025-11-23T03:10:09.397+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'elt_dbt_upstream', 'wait_for_market_data_ingest', 'scheduled__2025-11-22T03:00:00+00:00', '--job-id', '24', '--raw', '--subdir', 'DAGS_FOLDER/elt_dbt_upstream.py', '--cfg-path', '/tmp/tmp9aptbyz8']
+[2025-11-23T03:10:09.403+0000] {standard_task_runner.py:105} INFO - Job 24: Subtask wait_for_market_data_ingest
+[2025-11-23T03:10:09.403+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=4374) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-11-23T03:10:09.405+0000] {standard_task_runner.py:72} INFO - Started process 4376 to run task
+[2025-11-23T03:10:09.443+0000] {task_command.py:467} INFO - Running <TaskInstance: elt_dbt_upstream.wait_for_market_data_ingest scheduled__2025-11-22T03:00:00+00:00 [running]> on host fdac057bd921
+[2025-11-23T03:10:09.521+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='elt_dbt_upstream' AIRFLOW_CTX_TASK_ID='wait_for_market_data_ingest' AIRFLOW_CTX_EXECUTION_DATE='2025-11-22T03:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-11-22T03:00:00+00:00'
+[2025-11-23T03:10:09.522+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-11-23T03:10:09.531+0000] {baseoperator.py:405} WARNING - ExternalTaskSensor.execute cannot be called outside TaskInstance!
+[2025-11-23T03:10:09.532+0000] {external_task.py:274} INFO - Poking for DAG 'market_data_ingest' on 2025-11-22T02:30:00+00:00 ... 
+[2025-11-23T03:10:09.535+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/utils/session.py:97 DeprecationWarning: This method is deprecated and will be removed in future.
+[2025-11-23T04:11:18.236+0000] {job.py:229} INFO - Heartbeat recovered after 3643.48 seconds
+[2025-11-23T04:11:47.951+0000] {external_task.py:274} INFO - Poking for DAG 'market_data_ingest' on 2025-11-22T02:30:00+00:00 ... 
+[2025-11-23T04:11:47.957+0000] {base.py:336} INFO - Success criteria met. Exiting.
+[2025-11-23T04:11:47.962+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-11-23T04:11:47.962+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=elt_dbt_upstream, task_id=wait_for_market_data_ingest, run_id=scheduled__2025-11-22T03:00:00+00:00, execution_date=20251122T030000, start_date=20251123T031009, end_date=20251123T041147
+[2025-11-23T04:11:48.002+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-11-23T04:11:48.017+0000] {taskinstance.py:3900} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-11-23T04:11:48.018+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

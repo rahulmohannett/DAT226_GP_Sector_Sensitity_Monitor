@@ -1,0 +1,43 @@
+[2025-12-02T20:48:12.603+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-12-02T20:48:12.608+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: market_data_ingest.ensure_objects manual__2025-12-02T20:48:11.367750+00:00 [queued]>
+[2025-12-02T20:48:12.611+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: market_data_ingest.ensure_objects manual__2025-12-02T20:48:11.367750+00:00 [queued]>
+[2025-12-02T20:48:12.611+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 2
+[2025-12-02T20:48:12.615+0000] {taskinstance.py:2888} INFO - Executing <Task(SnowflakeOperator): ensure_objects> on 2025-12-02 20:48:11.367750+00:00
+[2025-12-02T20:48:12.619+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=455) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-12-02T20:48:12.619+0000] {standard_task_runner.py:72} INFO - Started process 465 to run task
+[2025-12-02T20:48:12.619+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'market_data_ingest', 'ensure_objects', 'manual__2025-12-02T20:48:11.367750+00:00', '--job-id', '71', '--raw', '--subdir', 'DAGS_FOLDER/market_data_ingest.py', '--cfg-path', '/tmp/tmpq7ft0y_e']
+[2025-12-02T20:48:12.620+0000] {standard_task_runner.py:105} INFO - Job 71: Subtask ensure_objects
+[2025-12-02T20:48:12.635+0000] {task_command.py:467} INFO - Running <TaskInstance: market_data_ingest.ensure_objects manual__2025-12-02T20:48:11.367750+00:00 [running]> on host 2e122a66e6c3
+[2025-12-02T20:48:12.759+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='data' AIRFLOW_CTX_DAG_ID='market_data_ingest' AIRFLOW_CTX_TASK_ID='ensure_objects' AIRFLOW_CTX_EXECUTION_DATE='2025-12-02T20:48:11.367750+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-12-02T20:48:11.367750+00:00'
+[2025-12-02T20:48:12.760+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-12-02T20:48:12.764+0000] {sql.py:266} INFO - Executing: ['create schema if not exists "USER_DB_OSTRICH"."RAW"', 'create table if not exists "USER_DB_OSTRICH"."RAW"."MARKET_DATA" (SYMBOL string, DATE date, OPEN float, CLOSE float, LOW float, HIGH float, VOLUME number)', 'create table if not exists "USER_DB_OSTRICH"."RAW"."MARKET_DATA_STAGE" (SYMBOL string, DATE date, OPEN float, CLOSE float, LOW float, HIGH float, VOLUME number)']
+[2025-12-02T20:48:12.768+0000] {base.py:84} INFO - Retrieving connection 'snowflake_conn'
+[2025-12-02T20:48:12.770+0000] {base.py:84} INFO - Retrieving connection 'snowflake_conn'
+[2025-12-02T20:48:12.770+0000] {connection.py:413} INFO - Snowflake Connector for Python Version: 3.12.1, Python Version: 3.12.5, Platform: Linux-6.10.14-linuxkit-aarch64-with-glibc2.36
+[2025-12-02T20:48:12.771+0000] {connection.py:1196} INFO - Connecting to GLOBAL Snowflake domain
+[2025-12-02T20:48:12.771+0000] {connection.py:1277} INFO - This connection is in OCSP Fail Open Mode. TLS Certificates would be checked for validity and revocation status. Any other Certificate Revocation related exceptions or OCSP Responder failures would be disregarded in favor of connectivity.
+[2025-12-02T20:48:13.185+0000] {cursor.py:1156} INFO - Number of results in first chunk: 1
+[2025-12-02T20:48:13.186+0000] {sql.py:509} INFO - Running statement: create schema if not exists "USER_DB_OSTRICH"."RAW", parameters: None
+[2025-12-02T20:48:13.277+0000] {cursor.py:1156} INFO - Number of results in first chunk: 1
+[2025-12-02T20:48:13.277+0000] {sql.py:518} INFO - Rows affected: 1
+[2025-12-02T20:48:13.278+0000] {snowflake.py:422} INFO - Rows affected: 1
+[2025-12-02T20:48:13.278+0000] {snowflake.py:423} INFO - Snowflake query id: 01c0c9e0-0307-2a54-000f-c0df00a8d18a
+[2025-12-02T20:48:13.278+0000] {sql.py:509} INFO - Running statement: create table if not exists "USER_DB_OSTRICH"."RAW"."MARKET_DATA" (SYMBOL string, DATE date, OPEN float, CLOSE float, LOW float, HIGH float, VOLUME number), parameters: None
+[2025-12-02T20:48:13.370+0000] {cursor.py:1156} INFO - Number of results in first chunk: 1
+[2025-12-02T20:48:13.371+0000] {sql.py:518} INFO - Rows affected: 1
+[2025-12-02T20:48:13.371+0000] {snowflake.py:422} INFO - Rows affected: 1
+[2025-12-02T20:48:13.372+0000] {snowflake.py:423} INFO - Snowflake query id: 01c0c9e0-0307-2a4d-000f-c0df00a8a47a
+[2025-12-02T20:48:13.372+0000] {sql.py:509} INFO - Running statement: create table if not exists "USER_DB_OSTRICH"."RAW"."MARKET_DATA_STAGE" (SYMBOL string, DATE date, OPEN float, CLOSE float, LOW float, HIGH float, VOLUME number), parameters: None
+[2025-12-02T20:48:13.470+0000] {cursor.py:1156} INFO - Number of results in first chunk: 1
+[2025-12-02T20:48:13.471+0000] {sql.py:518} INFO - Rows affected: 1
+[2025-12-02T20:48:13.472+0000] {snowflake.py:422} INFO - Rows affected: 1
+[2025-12-02T20:48:13.472+0000] {snowflake.py:423} INFO - Snowflake query id: 01c0c9e0-0307-2bb8-000f-c0df00a8f0f6
+[2025-12-02T20:48:13.583+0000] {cursor.py:1156} INFO - Number of results in first chunk: 1
+[2025-12-02T20:48:13.583+0000] {connection.py:788} INFO - closed
+[2025-12-02T20:48:13.641+0000] {connection.py:794} INFO - No async queries seem to be running, deleting session
+[2025-12-02T20:48:13.726+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-12-02T20:48:13.726+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=market_data_ingest, task_id=ensure_objects, run_id=manual__2025-12-02T20:48:11.367750+00:00, execution_date=20251202T204811, start_date=20251202T204812, end_date=20251202T204813
+[2025-12-02T20:48:13.766+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-12-02T20:48:13.771+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/models/baseoperator.py:1378 AirflowProviderDeprecationWarning: Call to deprecated class SnowflakeOperator. (This class is deprecated. Please use `***.providers.common.sql.operators.sql.SQLExecuteQueryOperator`. Also, you can provide `hook_params={'warehouse': <warehouse>, 'database': <database>, 'role': <role>, 'schema': <schema>, 'authenticator': <authenticator>,'session_parameters': <session_parameters>}`.)
+[2025-12-02T20:48:13.778+0000] {taskinstance.py:3900} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-12-02T20:48:13.779+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

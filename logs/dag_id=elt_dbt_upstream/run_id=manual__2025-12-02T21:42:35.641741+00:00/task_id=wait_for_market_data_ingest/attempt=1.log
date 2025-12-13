@@ -1,0 +1,48 @@
+[2025-12-02T21:42:35.761+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-12-02T21:42:35.768+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: elt_dbt_upstream.wait_for_market_data_ingest manual__2025-12-02T21:42:35.641741+00:00 [queued]>
+[2025-12-02T21:42:35.770+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: elt_dbt_upstream.wait_for_market_data_ingest manual__2025-12-02T21:42:35.641741+00:00 [queued]>
+[2025-12-02T21:42:35.771+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 2
+[2025-12-02T21:42:35.774+0000] {taskinstance.py:2888} INFO - Executing <Task(ExternalTaskSensor): wait_for_market_data_ingest> on 2025-12-02 21:42:35.641741+00:00
+[2025-12-02T21:42:35.778+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'elt_dbt_upstream', 'wait_for_market_data_ingest', 'manual__2025-12-02T21:42:35.641741+00:00', '--job-id', '103', '--raw', '--subdir', 'DAGS_FOLDER/elt_dbt_upstream.py', '--cfg-path', '/tmp/tmp1qgg1v86']
+[2025-12-02T21:42:35.780+0000] {standard_task_runner.py:105} INFO - Job 103: Subtask wait_for_market_data_ingest
+[2025-12-02T21:42:35.780+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=336) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-12-02T21:42:35.781+0000] {standard_task_runner.py:72} INFO - Started process 337 to run task
+[2025-12-02T21:42:35.797+0000] {task_command.py:467} INFO - Running <TaskInstance: elt_dbt_upstream.wait_for_market_data_ingest manual__2025-12-02T21:42:35.641741+00:00 [running]> on host 0178cd4bc9d5
+[2025-12-02T21:42:35.824+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='elt_dbt_upstream' AIRFLOW_CTX_TASK_ID='wait_for_market_data_ingest' AIRFLOW_CTX_EXECUTION_DATE='2025-12-02T21:42:35.641741+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-12-02T21:42:35.641741+00:00'
+[2025-12-02T21:42:35.824+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-12-02T21:42:35.830+0000] {baseoperator.py:405} WARNING - ExternalTaskSensor.execute cannot be called outside TaskInstance!
+[2025-12-02T21:42:35.830+0000] {external_task.py:274} INFO - Poking for DAG 'market_data_ingest' on 2025-12-02T21:12:35.641741+00:00 ... 
+[2025-12-02T21:42:35.832+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/utils/session.py:97 DeprecationWarning: This method is deprecated and will be removed in future.
+[2025-12-02T21:43:35.837+0000] {external_task.py:274} INFO - Poking for DAG 'market_data_ingest' on 2025-12-02T21:12:35.641741+00:00 ... 
+[2025-12-02T21:44:26.608+0000] {local_task_job_runner.py:346} WARNING - State of this instance has been externally set to None. Terminating instance.
+[2025-12-02T21:44:26.610+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2025-12-02T21:44:26.611+0000] {process_utils.py:132} INFO - Sending 15 to group 337. PIDs of all processes in the group: [337]
+[2025-12-02T21:44:26.611+0000] {process_utils.py:87} INFO - Sending the signal 15 to group 337
+[2025-12-02T21:44:26.611+0000] {taskinstance.py:3092} ERROR - Received SIGTERM. Terminating subprocesses.
+[2025-12-02T21:44:26.618+0000] {taskinstance.py:3310} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 406, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/sensors/external_task.py", line 348, in execute
+    super().execute(context)
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 406, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/sensors/base.py", line 334, in execute
+    time.sleep(self._get_next_poke_interval(started_at, run_duration, poke_count))
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3094, in signal_handler
+    raise AirflowTaskTerminated("Task received SIGTERM signal")
+airflow.exceptions.AirflowTaskTerminated: Task received SIGTERM signal
+[2025-12-02T21:44:26.621+0000] {taskinstance.py:1225} INFO - Marking task as UP_FOR_RETRY. dag_id=elt_dbt_upstream, task_id=wait_for_market_data_ingest, run_id=manual__2025-12-02T21:42:35.641741+00:00, execution_date=20251202T214235, start_date=20251202T214235, end_date=20251202T214426
+[2025-12-02T21:44:26.626+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-12-02T21:44:26.641+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=337, status='terminated', exitcode=2, started='21:42:35') (337) terminated with exit code 2

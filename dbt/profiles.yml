@@ -1,0 +1,14 @@
+stock_analytics:
+  target: dev
+  outputs:
+    dev:
+      type: snowflake
+      account: sfedu02-lvb17920
+      user: OSTRICH
+      password: Declan41arsenal
+      role: TRAINING_ROLE
+      warehouse: OSTRICH_QUERY_WH
+      database: USER_DB_OSTRICH
+      schema: PUBLIC  # This acts as the prefix for your other schemas
+      threads: 4
+      client_session_keep_alive: False

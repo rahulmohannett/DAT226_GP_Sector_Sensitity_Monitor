@@ -1,0 +1,39 @@
+[2025-12-06T06:24:57.781+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-12-06T06:24:57.787+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: elt_dbt_upstream.dbt_run_upstream manual__2025-12-06T06:06:02.417741+00:00 [queued]>
+[2025-12-06T06:24:57.789+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: elt_dbt_upstream.dbt_run_upstream manual__2025-12-06T06:06:02.417741+00:00 [queued]>
+[2025-12-06T06:24:57.789+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 2
+[2025-12-06T06:24:57.793+0000] {taskinstance.py:2888} INFO - Executing <Task(BashOperator): dbt_run_upstream> on 2025-12-06 06:06:02.417741+00:00
+[2025-12-06T06:24:57.796+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=24510) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-12-06T06:24:57.796+0000] {standard_task_runner.py:72} INFO - Started process 24511 to run task
+[2025-12-06T06:24:57.796+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'elt_dbt_upstream', 'dbt_run_upstream', 'manual__2025-12-06T06:06:02.417741+00:00', '--job-id', '351', '--raw', '--subdir', 'DAGS_FOLDER/elt_dbt_upstream.py', '--cfg-path', '/tmp/tmp38yqi9dl']
+[2025-12-06T06:24:57.797+0000] {standard_task_runner.py:105} INFO - Job 351: Subtask dbt_run_upstream
+[2025-12-06T06:24:57.811+0000] {task_command.py:467} INFO - Running <TaskInstance: elt_dbt_upstream.dbt_run_upstream manual__2025-12-06T06:06:02.417741+00:00 [running]> on host 7c17d7f5e8b7
+[2025-12-06T06:24:57.837+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='elt_dbt_upstream' AIRFLOW_CTX_TASK_ID='dbt_run_upstream' AIRFLOW_CTX_EXECUTION_DATE='2025-12-06T06:06:02.417741+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-12-06T06:06:02.417741+00:00'
+[2025-12-06T06:24:57.837+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-12-06T06:24:57.843+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-12-06T06:24:57.843+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'set -euo pipefail;cd /opt/***/dbt/stock_analytics && dbt run --select +mart_sector_volatility --profiles-dir /opt/***/dbt']
+[2025-12-06T06:24:57.846+0000] {subprocess.py:86} INFO - Output:
+[2025-12-06T06:24:58.709+0000] {subprocess.py:93} INFO - [0m06:24:58  Running with dbt=1.11.0-rc1
+[2025-12-06T06:24:58.877+0000] {subprocess.py:93} INFO - [0m06:24:58  Registered adapter: snowflake=1.10.3
+[2025-12-06T06:24:59.093+0000] {subprocess.py:93} INFO - [0m06:24:59  Found 6 models, 30 data tests, 1 seed, 2 sources, 504 macros
+[2025-12-06T06:24:59.094+0000] {subprocess.py:93} INFO - [0m06:24:59
+[2025-12-06T06:24:59.094+0000] {subprocess.py:93} INFO - [0m06:24:59  Concurrency: 4 threads (target='dev')
+[2025-12-06T06:24:59.095+0000] {subprocess.py:93} INFO - [0m06:24:59
+[2025-12-06T06:25:00.735+0000] {subprocess.py:93} INFO - [0m06:25:00  1 of 3 START sql view model PUBLIC_STAGING.stg_market_data ..................... [RUN]
+[2025-12-06T06:25:01.174+0000] {subprocess.py:93} INFO - [0m06:25:01  1 of 3 OK created sql view model PUBLIC_STAGING.stg_market_data ................ [[32mSUCCESS 1[0m in 0.44s]
+[2025-12-06T06:25:01.177+0000] {subprocess.py:93} INFO - [0m06:25:01  2 of 3 START sql view model PUBLIC_INTERMEDIATE.int_daily_returns .............. [RUN]
+[2025-12-06T06:25:02.386+0000] {subprocess.py:93} INFO - [0m06:25:02  2 of 3 OK created sql view model PUBLIC_INTERMEDIATE.int_daily_returns ......... [[32mSUCCESS 1[0m in 1.21s]
+[2025-12-06T06:25:02.391+0000] {subprocess.py:93} INFO - [0m06:25:02  3 of 3 START sql table model PUBLIC_ANALYTICS.mart_sector_volatility ........... [RUN]
+[2025-12-06T06:25:05.434+0000] {subprocess.py:93} INFO - [0m06:25:05  3 of 3 OK created sql table model PUBLIC_ANALYTICS.mart_sector_volatility ...... [[32mSUCCESS 1[0m in 3.04s]
+[2025-12-06T06:25:06.068+0000] {subprocess.py:93} INFO - [0m06:25:06
+[2025-12-06T06:25:06.070+0000] {subprocess.py:93} INFO - [0m06:25:06  Finished running 1 table model, 2 view models in 0 hours 0 minutes and 6.97 seconds (6.97s).
+[2025-12-06T06:25:06.117+0000] {subprocess.py:93} INFO - [0m06:25:06
+[2025-12-06T06:25:06.118+0000] {subprocess.py:93} INFO - [0m06:25:06  [32mCompleted successfully[0m
+[2025-12-06T06:25:06.118+0000] {subprocess.py:93} INFO - [0m06:25:06
+[2025-12-06T06:25:06.118+0000] {subprocess.py:93} INFO - [0m06:25:06  Done. PASS=3 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=3
+[2025-12-06T06:25:06.688+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-12-06T06:25:06.703+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-12-06T06:25:06.703+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=elt_dbt_upstream, task_id=dbt_run_upstream, run_id=manual__2025-12-06T06:06:02.417741+00:00, execution_date=20251206T060602, start_date=20251206T062457, end_date=20251206T062506
+[2025-12-06T06:25:06.731+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-12-06T06:25:06.739+0000] {taskinstance.py:3900} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-12-06T06:25:06.739+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

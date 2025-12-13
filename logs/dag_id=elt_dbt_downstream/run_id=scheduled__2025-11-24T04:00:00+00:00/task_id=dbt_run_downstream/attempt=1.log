@@ -1,0 +1,39 @@
+[2025-12-02T20:50:55.968+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-12-02T20:50:55.976+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: elt_dbt_downstream.dbt_run_downstream scheduled__2025-11-24T04:00:00+00:00 [queued]>
+[2025-12-02T20:50:55.979+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: elt_dbt_downstream.dbt_run_downstream scheduled__2025-11-24T04:00:00+00:00 [queued]>
+[2025-12-02T20:50:55.979+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 2
+[2025-12-02T20:50:55.983+0000] {taskinstance.py:2888} INFO - Executing <Task(BashOperator): dbt_run_downstream> on 2025-11-24 04:00:00+00:00
+[2025-12-02T20:50:55.987+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=716) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-12-02T20:50:55.986+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'elt_dbt_downstream', 'dbt_run_downstream', 'scheduled__2025-11-24T04:00:00+00:00', '--job-id', '84', '--raw', '--subdir', 'DAGS_FOLDER/elt_dbt_downstream.py', '--cfg-path', '/tmp/tmpbco2ryqm']
+[2025-12-02T20:50:55.988+0000] {standard_task_runner.py:105} INFO - Job 84: Subtask dbt_run_downstream
+[2025-12-02T20:50:55.988+0000] {standard_task_runner.py:72} INFO - Started process 717 to run task
+[2025-12-02T20:50:56.006+0000] {task_command.py:467} INFO - Running <TaskInstance: elt_dbt_downstream.dbt_run_downstream scheduled__2025-11-24T04:00:00+00:00 [running]> on host 2e122a66e6c3
+[2025-12-02T20:50:56.035+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='elt_dbt_downstream' AIRFLOW_CTX_TASK_ID='dbt_run_downstream' AIRFLOW_CTX_EXECUTION_DATE='2025-11-24T04:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-11-24T04:00:00+00:00'
+[2025-12-02T20:50:56.035+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-12-02T20:50:56.042+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-12-02T20:50:56.042+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'set -euo pipefail;cd /opt/***/dbt/stock_analytics && dbt run --select mart_forecast_combined mart_risk_reward_scatter mart_market_regime --profiles-dir /opt/***/dbt']
+[2025-12-02T20:50:56.046+0000] {subprocess.py:86} INFO - Output:
+[2025-12-02T20:50:56.996+0000] {subprocess.py:93} INFO - [0m20:50:56  Running with dbt=1.11.0-rc1
+[2025-12-02T20:50:57.179+0000] {subprocess.py:93} INFO - [0m20:50:57  Registered adapter: snowflake=1.10.3
+[2025-12-02T20:50:57.400+0000] {subprocess.py:93} INFO - [0m20:50:57  Found 6 models, 27 data tests, 1 seed, 2 sources, 504 macros
+[2025-12-02T20:50:57.402+0000] {subprocess.py:93} INFO - [0m20:50:57
+[2025-12-02T20:50:57.402+0000] {subprocess.py:93} INFO - [0m20:50:57  Concurrency: 4 threads (target='dev')
+[2025-12-02T20:50:57.402+0000] {subprocess.py:93} INFO - [0m20:50:57
+[2025-12-02T20:50:58.685+0000] {subprocess.py:93} INFO - [0m20:50:58  1 of 3 START sql table model PUBLIC_ANALYTICS.mart_forecast_combined ........... [RUN]
+[2025-12-02T20:50:58.686+0000] {subprocess.py:93} INFO - [0m20:50:58  2 of 3 START sql table model PUBLIC_ANALYTICS.mart_market_regime ............... [RUN]
+[2025-12-02T20:50:58.686+0000] {subprocess.py:93} INFO - [0m20:50:58  3 of 3 START sql table model PUBLIC_ANALYTICS.mart_risk_reward_scatter ......... [RUN]
+[2025-12-02T20:50:59.690+0000] {subprocess.py:93} INFO - [0m20:50:59  1 of 3 OK created sql table model PUBLIC_ANALYTICS.mart_forecast_combined ...... [[32mSUCCESS 1[0m in 1.00s]
+[2025-12-02T20:50:59.842+0000] {subprocess.py:93} INFO - [0m20:50:59  3 of 3 OK created sql table model PUBLIC_ANALYTICS.mart_risk_reward_scatter .... [[32mSUCCESS 1[0m in 1.15s]
+[2025-12-02T20:51:00.878+0000] {subprocess.py:93} INFO - [0m20:51:00  2 of 3 OK created sql table model PUBLIC_ANALYTICS.mart_market_regime .......... [[32mSUCCESS 1[0m in 2.19s]
+[2025-12-02T20:51:02.152+0000] {subprocess.py:93} INFO - [0m20:51:02
+[2025-12-02T20:51:02.153+0000] {subprocess.py:93} INFO - [0m20:51:02  Finished running 3 table models in 0 hours 0 minutes and 4.75 seconds (4.75s).
+[2025-12-02T20:51:02.188+0000] {subprocess.py:93} INFO - [0m20:51:02
+[2025-12-02T20:51:02.188+0000] {subprocess.py:93} INFO - [0m20:51:02  [32mCompleted successfully[0m
+[2025-12-02T20:51:02.189+0000] {subprocess.py:93} INFO - [0m20:51:02
+[2025-12-02T20:51:02.189+0000] {subprocess.py:93} INFO - [0m20:51:02  Done. PASS=3 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=3
+[2025-12-02T20:51:02.739+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-12-02T20:51:02.748+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-12-02T20:51:02.748+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=elt_dbt_downstream, task_id=dbt_run_downstream, run_id=scheduled__2025-11-24T04:00:00+00:00, execution_date=20251124T040000, start_date=20251202T205055, end_date=20251202T205102
+[2025-12-02T20:51:02.774+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-12-02T20:51:02.782+0000] {taskinstance.py:3900} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-12-02T20:51:02.782+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

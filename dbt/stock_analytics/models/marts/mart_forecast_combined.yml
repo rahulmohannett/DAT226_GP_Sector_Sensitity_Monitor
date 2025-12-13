@@ -1,0 +1,37 @@
+version: 2
+
+models:
+  - name: mart_forecast_combined
+    description: "Unified view combining historical actuals (from Volatility Mart) and future predictions (from ML Forecast)."
+    tests:
+      # Ensure we never have duplicate rows for a single symbol on a single date
+      - unique:
+          column_name: "(symbol || '-' || date)"
+    columns:
+      - name: symbol
+        description: "Stock or Sector Ticker (e.g., XLK, SPY)."
+        tests:
+          - not_null
+
+      - name: sector_name
+        description: "Full readable name (e.g., Technology)."
+        tests:
+          - not_null
+
+      - name: date
+        description: "Trading date (Historical or Future)."
+        tests:
+          - not_null
+
+      - name: type
+        description: "Indicator of row source."
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['history', 'forecast']
+
+      - name: actual_beta
+        description: "The calculated rolling beta (Null for future rows)."
+
+      - name: forecast_beta
+        description: "The predicted beta from Snowflake Cortex (Null for history rows)."

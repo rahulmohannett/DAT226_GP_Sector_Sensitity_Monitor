@@ -1,0 +1,21 @@
+version: 2
+
+models:
+  - name: mart_market_regime
+    description: "Daily sentiment tracker comparing Offensive vs Defensive sector betas."
+    columns:
+      - name: date
+        tests:
+          - unique
+          - not_null
+      - name: offensive_beta
+        description: "Average beta of Cyclical sectors (XLK, XLY, XLF)."
+      - name: defensive_beta
+        description: "Average beta of Defensive sectors (XLU, XLP, XLV)."
+      - name: sentiment_spread
+        description: "Difference between Offensive and Defensive beta."
+      # NEW COLUMN
+      - name: tech_bubble_ratio
+        description: "Ratio of Tech Beta to Average Market Beta. > 1.2 indicates concentration risk."
+        tests:
+          - not_null

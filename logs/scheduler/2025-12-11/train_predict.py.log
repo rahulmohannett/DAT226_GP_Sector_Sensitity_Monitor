@@ -1,0 +1,77 @@
+[2025-12-11T00:00:14.542+0000] {processor.py:186} INFO - Started process (PID=31207) to work on /opt/airflow/dags/train_predict.py
+[2025-12-11T00:00:14.542+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/train_predict.py for tasks to queue
+[2025-12-11T00:00:14.544+0000] {logging_mixin.py:190} INFO - [2025-12-11T00:00:14.544+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/train_predict.py
+[2025-12-11T00:00:14.552+0000] {processor.py:925} INFO - DAG(s) 'TrainPredict' retrieved from /opt/airflow/dags/train_predict.py
+[2025-12-11T00:00:14.571+0000] {logging_mixin.py:190} INFO - [2025-12-11T00:00:14.571+0000] {dag.py:3229} INFO - Sync 1 DAGs
+[2025-12-11T00:00:14.581+0000] {logging_mixin.py:190} INFO - [2025-12-11T00:00:14.581+0000] {dag.py:4156} INFO - Setting next_dagrun for TrainPredict to 2025-12-10 03:30:00+00:00, run_after=2025-12-11 03:30:00+00:00
+[2025-12-11T00:00:14.588+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/train_predict.py took 0.051 seconds
+[2025-12-11T00:00:45.051+0000] {processor.py:186} INFO - Started process (PID=31233) to work on /opt/airflow/dags/train_predict.py
+[2025-12-11T00:00:45.052+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/train_predict.py for tasks to queue
+[2025-12-11T00:00:45.054+0000] {logging_mixin.py:190} INFO - [2025-12-11T00:00:45.054+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/train_predict.py
+[2025-12-11T00:00:45.062+0000] {processor.py:925} INFO - DAG(s) 'TrainPredict' retrieved from /opt/airflow/dags/train_predict.py
+[2025-12-11T00:00:45.079+0000] {logging_mixin.py:190} INFO - [2025-12-11T00:00:45.079+0000] {dag.py:3229} INFO - Sync 1 DAGs
+[2025-12-11T00:00:45.092+0000] {logging_mixin.py:190} INFO - [2025-12-11T00:00:45.092+0000] {dag.py:4156} INFO - Setting next_dagrun for TrainPredict to 2025-12-10 03:30:00+00:00, run_after=2025-12-11 03:30:00+00:00
+[2025-12-11T00:00:45.102+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/train_predict.py took 0.057 seconds
+[2025-12-11T00:01:15.498+0000] {processor.py:186} INFO - Started process (PID=31259) to work on /opt/airflow/dags/train_predict.py
+[2025-12-11T00:01:15.499+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/train_predict.py for tasks to queue
+[2025-12-11T00:01:15.501+0000] {logging_mixin.py:190} INFO - [2025-12-11T00:01:15.501+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/train_predict.py
+[2025-12-11T00:01:15.512+0000] {processor.py:925} INFO - DAG(s) 'TrainPredict' retrieved from /opt/airflow/dags/train_predict.py
+[2025-12-11T00:01:15.527+0000] {logging_mixin.py:190} INFO - [2025-12-11T00:01:15.527+0000] {dag.py:3229} INFO - Sync 1 DAGs
+[2025-12-11T00:01:15.538+0000] {logging_mixin.py:190} INFO - [2025-12-11T00:01:15.538+0000] {dag.py:4156} INFO - Setting next_dagrun for TrainPredict to 2025-12-10 03:30:00+00:00, run_after=2025-12-11 03:30:00+00:00
+[2025-12-11T00:01:15.544+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/train_predict.py took 0.051 seconds
+[2025-12-11T00:01:45.963+0000] {processor.py:186} INFO - Started process (PID=31285) to work on /opt/airflow/dags/train_predict.py
+[2025-12-11T00:01:45.964+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/train_predict.py for tasks to queue
+[2025-12-11T00:01:45.965+0000] {logging_mixin.py:190} INFO - [2025-12-11T00:01:45.965+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/train_predict.py
+[2025-12-11T00:01:45.977+0000] {processor.py:925} INFO - DAG(s) 'TrainPredict' retrieved from /opt/airflow/dags/train_predict.py
+[2025-12-11T00:01:45.990+0000] {logging_mixin.py:190} INFO - [2025-12-11T00:01:45.990+0000] {dag.py:3229} INFO - Sync 1 DAGs
+[2025-12-11T00:01:46.000+0000] {logging_mixin.py:190} INFO - [2025-12-11T00:01:46.000+0000] {dag.py:4156} INFO - Setting next_dagrun for TrainPredict to 2025-12-10 03:30:00+00:00, run_after=2025-12-11 03:30:00+00:00
+[2025-12-11T00:01:46.007+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/train_predict.py took 0.049 seconds
+[2025-12-11T00:02:16.407+0000] {processor.py:186} INFO - Started process (PID=31311) to work on /opt/airflow/dags/train_predict.py
+[2025-12-11T00:02:16.408+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/train_predict.py for tasks to queue
+[2025-12-11T00:02:16.410+0000] {logging_mixin.py:190} INFO - [2025-12-11T00:02:16.410+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/train_predict.py
+[2025-12-11T00:02:16.423+0000] {processor.py:925} INFO - DAG(s) 'TrainPredict' retrieved from /opt/airflow/dags/train_predict.py
+[2025-12-11T00:02:16.437+0000] {logging_mixin.py:190} INFO - [2025-12-11T00:02:16.437+0000] {dag.py:3229} INFO - Sync 1 DAGs
+[2025-12-11T00:02:16.449+0000] {logging_mixin.py:190} INFO - [2025-12-11T00:02:16.449+0000] {dag.py:4156} INFO - Setting next_dagrun for TrainPredict to 2025-12-10 03:30:00+00:00, run_after=2025-12-11 03:30:00+00:00
+[2025-12-11T00:02:16.457+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/train_predict.py took 0.055 seconds
+[2025-12-11T00:02:46.975+0000] {processor.py:186} INFO - Started process (PID=31337) to work on /opt/airflow/dags/train_predict.py
+[2025-12-11T00:02:46.975+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/train_predict.py for tasks to queue
+[2025-12-11T00:02:46.978+0000] {logging_mixin.py:190} INFO - [2025-12-11T00:02:46.978+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/train_predict.py
+[2025-12-11T00:02:46.986+0000] {processor.py:925} INFO - DAG(s) 'TrainPredict' retrieved from /opt/airflow/dags/train_predict.py
+[2025-12-11T00:02:47.000+0000] {logging_mixin.py:190} INFO - [2025-12-11T00:02:46.999+0000] {dag.py:3229} INFO - Sync 1 DAGs
+[2025-12-11T00:02:47.013+0000] {logging_mixin.py:190} INFO - [2025-12-11T00:02:47.013+0000] {dag.py:4156} INFO - Setting next_dagrun for TrainPredict to 2025-12-10 03:30:00+00:00, run_after=2025-12-11 03:30:00+00:00
+[2025-12-11T00:02:47.023+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/train_predict.py took 0.053 seconds
+[2025-12-11T00:03:17.385+0000] {processor.py:186} INFO - Started process (PID=31363) to work on /opt/airflow/dags/train_predict.py
+[2025-12-11T00:03:17.386+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/train_predict.py for tasks to queue
+[2025-12-11T00:03:17.387+0000] {logging_mixin.py:190} INFO - [2025-12-11T00:03:17.387+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/train_predict.py
+[2025-12-11T00:03:17.398+0000] {processor.py:925} INFO - DAG(s) 'TrainPredict' retrieved from /opt/airflow/dags/train_predict.py
+[2025-12-11T00:03:17.411+0000] {logging_mixin.py:190} INFO - [2025-12-11T00:03:17.411+0000] {dag.py:3229} INFO - Sync 1 DAGs
+[2025-12-11T00:03:17.420+0000] {logging_mixin.py:190} INFO - [2025-12-11T00:03:17.420+0000] {dag.py:4156} INFO - Setting next_dagrun for TrainPredict to 2025-12-10 03:30:00+00:00, run_after=2025-12-11 03:30:00+00:00
+[2025-12-11T00:03:17.427+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/train_predict.py took 0.047 seconds
+[2025-12-11T00:03:47.853+0000] {processor.py:186} INFO - Started process (PID=31389) to work on /opt/airflow/dags/train_predict.py
+[2025-12-11T00:03:47.854+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/train_predict.py for tasks to queue
+[2025-12-11T00:03:47.856+0000] {logging_mixin.py:190} INFO - [2025-12-11T00:03:47.856+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/train_predict.py
+[2025-12-11T00:03:47.864+0000] {processor.py:925} INFO - DAG(s) 'TrainPredict' retrieved from /opt/airflow/dags/train_predict.py
+[2025-12-11T00:03:47.877+0000] {logging_mixin.py:190} INFO - [2025-12-11T00:03:47.877+0000] {dag.py:3229} INFO - Sync 1 DAGs
+[2025-12-11T00:03:47.889+0000] {logging_mixin.py:190} INFO - [2025-12-11T00:03:47.889+0000] {dag.py:4156} INFO - Setting next_dagrun for TrainPredict to 2025-12-10 03:30:00+00:00, run_after=2025-12-11 03:30:00+00:00
+[2025-12-11T00:03:47.898+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/train_predict.py took 0.050 seconds
+[2025-12-11T00:04:18.308+0000] {processor.py:186} INFO - Started process (PID=31415) to work on /opt/airflow/dags/train_predict.py
+[2025-12-11T00:04:18.309+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/train_predict.py for tasks to queue
+[2025-12-11T00:04:18.311+0000] {logging_mixin.py:190} INFO - [2025-12-11T00:04:18.310+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/train_predict.py
+[2025-12-11T00:04:18.318+0000] {processor.py:925} INFO - DAG(s) 'TrainPredict' retrieved from /opt/airflow/dags/train_predict.py
+[2025-12-11T00:04:18.332+0000] {logging_mixin.py:190} INFO - [2025-12-11T00:04:18.332+0000] {dag.py:3229} INFO - Sync 1 DAGs
+[2025-12-11T00:04:18.346+0000] {logging_mixin.py:190} INFO - [2025-12-11T00:04:18.346+0000] {dag.py:4156} INFO - Setting next_dagrun for TrainPredict to 2025-12-10 03:30:00+00:00, run_after=2025-12-11 03:30:00+00:00
+[2025-12-11T00:04:18.353+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/train_predict.py took 0.050 seconds
+[2025-12-11T00:04:48.770+0000] {processor.py:186} INFO - Started process (PID=31441) to work on /opt/airflow/dags/train_predict.py
+[2025-12-11T00:04:48.773+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/train_predict.py for tasks to queue
+[2025-12-11T00:04:48.774+0000] {logging_mixin.py:190} INFO - [2025-12-11T00:04:48.774+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/train_predict.py
+[2025-12-11T00:04:48.784+0000] {processor.py:925} INFO - DAG(s) 'TrainPredict' retrieved from /opt/airflow/dags/train_predict.py
+[2025-12-11T00:04:48.797+0000] {logging_mixin.py:190} INFO - [2025-12-11T00:04:48.797+0000] {dag.py:3229} INFO - Sync 1 DAGs
+[2025-12-11T00:04:48.808+0000] {logging_mixin.py:190} INFO - [2025-12-11T00:04:48.808+0000] {dag.py:4156} INFO - Setting next_dagrun for TrainPredict to 2025-12-10 03:30:00+00:00, run_after=2025-12-11 03:30:00+00:00
+[2025-12-11T00:04:48.816+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/train_predict.py took 0.051 seconds
+[2025-12-11T00:05:19.183+0000] {processor.py:186} INFO - Started process (PID=31467) to work on /opt/airflow/dags/train_predict.py
+[2025-12-11T00:05:19.183+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/train_predict.py for tasks to queue
+[2025-12-11T00:05:19.186+0000] {logging_mixin.py:190} INFO - [2025-12-11T00:05:19.185+0000] {dagbag.py:587} INFO - Filling up the DagBag from /opt/airflow/dags/train_predict.py
+[2025-12-11T00:05:19.195+0000] {processor.py:925} INFO - DAG(s) 'TrainPredict' retrieved from /opt/airflow/dags/train_predict.py
+[2025-12-11T00:05:19.213+0000] {logging_mixin.py:190} INFO - [2025-12-11T00:05:19.212+0000] {dag.py:3229} INFO - Sync 1 DAGs
+[2025-12-11T00:05:19.245+0000] {logging_mixin.py:190} INFO - [2025-12-11T00:05:19.245+0000] {dag.py:4156} INFO - Setting next_dagrun for TrainPredict to 2025-12-10 03:30:00+00:00, run_after=2025-12-11 03:30:00+00:00
+[2025-12-11T00:05:19.255+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/train_predict.py took 0.077 seconds

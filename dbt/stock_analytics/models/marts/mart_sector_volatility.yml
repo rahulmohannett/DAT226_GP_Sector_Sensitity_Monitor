@@ -1,0 +1,30 @@
+version: 2
+
+models:
+  - name: mart_sector_volatility
+    description: "Rolling 90-day beta sensitivity of sectors against SPY."
+    columns:
+      - name: symbol
+        description: "ETF Ticker (e.g., XLK)."
+        tests:
+          - not_null
+
+      # NEW COLUMN
+      - name: sector_name
+        description: "Full readable name of the sector (e.g., Technology)."
+        tests:
+          - not_null
+
+      - name: date
+        tests:
+          - not_null
+
+      - name: rolling_beta
+        tests:
+          - not_null
+
+      # NEW COLUMN
+      - name: weighted_impact
+        description: "Risk Contribution: (Beta * Weight). Shows how much this sector moves the Index."
+        tests:
+          - not_null

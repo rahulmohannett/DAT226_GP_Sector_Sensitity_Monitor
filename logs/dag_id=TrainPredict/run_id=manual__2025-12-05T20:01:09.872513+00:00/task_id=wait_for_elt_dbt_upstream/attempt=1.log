@@ -1,0 +1,24 @@
+[2025-12-05T20:01:10.853+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-12-05T20:01:10.867+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: TrainPredict.wait_for_elt_dbt_upstream manual__2025-12-05T20:01:09.872513+00:00 [queued]>
+[2025-12-05T20:01:10.870+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: TrainPredict.wait_for_elt_dbt_upstream manual__2025-12-05T20:01:09.872513+00:00 [queued]>
+[2025-12-05T20:01:10.870+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2025-12-05T20:01:10.874+0000] {taskinstance.py:2888} INFO - Executing <Task(ExternalTaskSensor): wait_for_elt_dbt_upstream> on 2025-12-05 20:01:09.872513+00:00
+[2025-12-05T20:01:10.879+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=288) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-12-05T20:01:10.879+0000] {standard_task_runner.py:72} INFO - Started process 291 to run task
+[2025-12-05T20:01:10.879+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'TrainPredict', 'wait_for_elt_dbt_upstream', 'manual__2025-12-05T20:01:09.872513+00:00', '--job-id', '250', '--raw', '--subdir', 'DAGS_FOLDER/train_predict.py', '--cfg-path', '/tmp/tmp9k8b77ee']
+[2025-12-05T20:01:10.880+0000] {standard_task_runner.py:105} INFO - Job 250: Subtask wait_for_elt_dbt_upstream
+[2025-12-05T20:01:10.910+0000] {task_command.py:467} INFO - Running <TaskInstance: TrainPredict.wait_for_elt_dbt_upstream manual__2025-12-05T20:01:09.872513+00:00 [running]> on host 7c17d7f5e8b7
+[2025-12-05T20:01:10.957+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='TrainPredict' AIRFLOW_CTX_TASK_ID='wait_for_elt_dbt_upstream' AIRFLOW_CTX_EXECUTION_DATE='2025-12-05T20:01:09.872513+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-12-05T20:01:09.872513+00:00'
+[2025-12-05T20:01:10.958+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-12-05T20:01:10.959+0000] {baseoperator.py:405} WARNING - ExternalTaskSensor.execute cannot be called outside TaskInstance!
+[2025-12-05T20:01:10.960+0000] {external_task.py:274} INFO - Poking for DAG 'elt_dbt_upstream' on 2025-12-05T19:31:09.872513+00:00 ... 
+[2025-12-05T20:01:10.960+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/utils/session.py:97 DeprecationWarning: This method is deprecated and will be removed in future.
+[2025-12-05T20:02:10.969+0000] {external_task.py:274} INFO - Poking for DAG 'elt_dbt_upstream' on 2025-12-05T19:31:09.872513+00:00 ... 
+[2025-12-05T20:03:10.993+0000] {external_task.py:274} INFO - Poking for DAG 'elt_dbt_upstream' on 2025-12-05T19:31:09.872513+00:00 ... 
+[2025-12-05T20:03:37.091+0000] {local_task_job_runner.py:346} WARNING - State of this instance has been externally set to success. Terminating instance.
+[2025-12-05T20:03:37.095+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
+[2025-12-05T20:03:37.096+0000] {process_utils.py:132} INFO - Sending 15 to group 291. PIDs of all processes in the group: [291]
+[2025-12-05T20:03:37.096+0000] {process_utils.py:87} INFO - Sending the signal 15 to group 291
+[2025-12-05T20:03:37.097+0000] {taskinstance.py:3092} ERROR - Received SIGTERM. Terminating subprocesses.
+[2025-12-05T20:03:37.110+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-12-05T20:03:37.131+0000] {process_utils.py:80} INFO - Process psutil.Process(pid=291, status='terminated', exitcode=0, started='20:01:10') (291) terminated with exit code 0
